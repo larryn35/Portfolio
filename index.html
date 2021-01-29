@@ -61,7 +61,7 @@
     <!-- Header end -->
 
     <!-- home page -->
-    <section class="home-page section p-4" id="home">
+    <section class="home-page section" id="home">
       <!-- Banner -->
       <div class="d-flex flex-column align-items-center">
         <h1 class="name-text">Larry Nguyen</h1>
@@ -84,7 +84,9 @@
         </div>
 
         <div class="site-button">
-          <button type="button" class="btn default">github</button>
+          <button type="button" class="btn default">
+            <a href="https://github.com/larryn35/" class="text-reset">github repo</a>
+          </button>
           <button type="button" class="btn default">resume</button>
         </div>
       </div>
@@ -93,18 +95,18 @@
     <!-- home page end -->
 
     <!-- portfolio page -->
-    <section class="portfolio-page section p-4" id="portfolio">
+    <section class="portfolio-page section" id="portfolio">
       <!-- Portfolio -->
-      <h1 class="portfolio-title text-end">portfolio</h1>
-
       <div class="portfolio container">
+        <h1 class="portfolio-title">portfolio</h1>
+
         <div class="row">
           <div class="col-md-6 col-sm-12">
             <div
               class="d-flex flex-row align-items-center justify-content-center"
             >
               <img
-                src="/img/HW-icon.png"
+                src="/img/HelloWorld/HW-icon.png"
                 alt="hello world app icon"
                 class="app-icon"
               />
@@ -117,12 +119,16 @@
               Built with SwiftUI and Firebase.
             </h3>
             <div class="p-4">
-              <button type="button" class="btn default">read more</button>
-              <button type="button" class="btn default">github repo</button>
+              <button type="button" class="btn default"> 
+                <a href="/helloworld.html" class="text-reset">read more</a>
+              </button>
+              <button type="button" class="btn default">
+                <a href="https://github.com/larryn35/HelloWorld" class="text-reset">github repo</a>
+              </button>
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
-            <img src="/img/1.png" alt="" class="app-screenshot" />
+            <img src="/img/HelloWorld/1.png" alt="" class="app-screenshot" />
           </div>
         </div>
       </div>
@@ -131,12 +137,13 @@
     <!-- portfolio page end -->
 
     <!-- contact page -->
-    <div class="contact-page section" id="contact">
+    <section class="contact-page section" id="contact">
       <!-- Contact -->
-      <section class="contact">
-        <div class="container p-4">
+      <class class="contact">
+        <div class="container">
+          <h1 class="contact-title text-start">contact</h1>
+
           <div class="row d-flex justify-content-center">
-            <h1 class="contact-title text-start">contact</h1>
             <h3 class="contact-text">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque,
               quas! Non explicabo a a a a a a a a a mollitia consectetur eveniet
@@ -146,9 +153,9 @@
             </h3>
           </div>
         </div>
-      </section>
+      </class>
       <!-- Contact end -->
-    </div>
+    </section>
     <!-- contact page end -->
 
     <!-- JS -->

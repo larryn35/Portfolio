@@ -48,6 +48,10 @@ body {
 /* buttons end */
 
 /* nav bar */
+.header-area {
+  padding-bottom: 70px;
+}
+
 .header-area .main-menu .navbar .navbar-text {
   white-space: nowrap;
   font-family: var(--ff-secondary);
@@ -83,7 +87,6 @@ body {
 
 /* portfolio */
 .portfolio-page .portfolio-title {
-  padding: 0.25rem 0.5rem;
 }
 
 .portfolio-page .portfolio .app-screenshot {
@@ -95,10 +98,23 @@ body {
   height: 50px;
   border-radius: 10px;
 }
+
+.portfolio-page .portfolio 
 /* portfolio end */
 
 /* contact */
+
 .contact .contact-title {
-  padding: 0.25rem 0.5rem;
 }
 /* contact end */
+
+
+/* ============== app detail page ============== */
+
+.app-detail .gif {
+  width: 250px;
+  height: auto;
+}
+
+
+/* ============== app detail page ============== */
