@@ -12,7 +12,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -23,7 +22,7 @@
   </head>
 
   <body>
-    <!-- Header -->
+    <!----------------------------------------- Header ----------------------------------------->
     <header class="header-area">
       <div class="main-menu">
         <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-white">
@@ -50,6 +49,9 @@
                   <a class="nav-link" href="#portfolio">Portfolio</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="#contact">Contact</a>
                 </li>
               </ul>
@@ -58,11 +60,10 @@
         </nav>
       </div>
     </header>
-    <!-- Header end -->
+    <!----------------------------------------- Header end ------------------------------------------>
 
-    <!-- home page -->
+    <!----------------------------------------- home page ----------------------------------------->
     <section class="home-page section" id="home">
-      <!-- Banner -->
       <div class="d-flex flex-column align-items-center">
         <h1 class="name-text">Larry Nguyen</h1>
         <h3 class="iOS-text">iOS developer</h3>
@@ -74,29 +75,23 @@
         />
 
         <div class="container">
-          <h3 class="about-text">
+          <h3 class="about-text text-center">
             Self-taught iOS developer located in the San Francisco Bay Area.
-            After graduating from pharmacy school, I found myself having more
-            free time to learn different things. I picked up coding and quickly
-            found a passion for it. Programming has been challenging yet
-            rewarding and building apps to be a way for me to be creative.
           </h3>
         </div>
 
         <div class="site-button">
           <button type="button" class="btn default">
-            <a href="https://github.com/larryn35/" class="text-reset">github repo</a>
+            <a href="https://github.com/larryn35/" class="text-reset">github</a>
           </button>
           <button type="button" class="btn default">resume</button>
         </div>
       </div>
-      <!-- Banner end -->
     </section>
-    <!-- home page end -->
+    <!----------------------------------------- home page end ----------------------------------------->
 
-    <!-- portfolio page -->
+    <!----------------------------------------- portfolio page ----------------------------------------->
     <section class="portfolio-page section" id="portfolio">
-      <!-- Portfolio -->
       <div class="portfolio container">
         <h1 class="portfolio-title">portfolio</h1>
 
@@ -119,11 +114,15 @@
               Built with SwiftUI and Firebase.
             </h3>
             <div class="p-4">
-              <button type="button" class="btn default"> 
+              <button type="button" class="btn default">
                 <a href="/helloworld.html" class="text-reset">read more</a>
               </button>
               <button type="button" class="btn default">
-                <a href="https://github.com/larryn35/HelloWorld" class="text-reset">github repo</a>
+                <a
+                  href="https://github.com/larryn35/HelloWorld"
+                  class="text-reset"
+                  >github repo</a
+                >
               </button>
             </div>
           </div>
@@ -132,33 +131,55 @@
           </div>
         </div>
       </div>
-      <!-- Portfolio end -->
     </section>
-    <!-- portfolio page end -->
+    <!----------------------------------------- portfolio page end ----------------------------------------->
 
-    <!-- contact page -->
-    <section class="contact-page section" id="contact">
-      <!-- Contact -->
-      <class class="contact">
-        <div class="container">
-          <h1 class="contact-title text-start">contact</h1>
+    <!----------------------------------------- about me page ----------------------------------------->
+    <section class="about-page section" id="about">
+      <div class="container">
+        <h1 class="about-title text-start">about me</h1>
 
-          <div class="row d-flex justify-content-center">
-            <h3 class="contact-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque,
-              quas! Non explicabo a a a a a a a a a mollitia consectetur eveniet
-              rerum facere dolor impedit ullam voluptatibus in, cum quis,
-              laudantium tempore officia. Sit at eius ut maxime aliquid vel
-              corporis rem assumenda voluptatum? Nam, quasi.
-            </h3>
-          </div>
+        <div class="row d-flex justify-content-center">
+          <h3 class="about-text">
+            I am a self-taught iOS developer located in the San Francisco Bay
+            Area. I started coding about a year ago, originally as a hobby. That
+            interest continued to grow as I learned the ins and outs of the
+            language - from variables, to loops, to classes and dictionaries. I
+            learned how to use pandas and Plotly to analyze and visualize data
+            and later began learning HTML and CSS so I could build websites.
+            Learning to code has been a challenging, yet very rewarding
+            experience thus far. From print("Hello, World!") to building
+            websites and games, it is a great feeling to see something you
+            envision come to life with some (or many) lines of code. I look
+            forward to continuing this journey and hope to one day make
+            something that would improve the lives of others. In my free time, I
+            enjoy watching and playing sports, photography, and listening to
+            music.
+          </h3>
         </div>
-      </class>
-      <!-- Contact end -->
+      </div>
     </section>
-    <!-- contact page end -->
+    <!----------------------------------------- about me end ----------------------------------------->
 
-    <!-- JS -->
+    <!----------------------------------------- contact page ----------------------------------------->
+    <section class="contact-page section" id="contact">
+      <div class="container">
+        <h1 class="contact-title text-start">contact</h1>
+
+        <div class="row d-flex justify-content-center">
+          <h3 class="contact-text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque,
+            quas! Non explicabo a a a a a a a a a mollitia consectetur eveniet
+            rerum facere dolor impedit ullam voluptatibus in, cum quis,
+            laudantium tempore officia. Sit at eius ut maxime aliquid vel
+            corporis rem assumenda voluptatum? Nam, quasi.
+          </h3>
+        </div>
+      </div>
+    </section>
+    <!----------------------------------------- contact page end ----------------------------------------->
+
+    <!----------------------------------------- JS ----------------------------------------->
     <script src="/js/index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
