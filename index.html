@@ -12,6 +12,10 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="/css/style.css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -63,28 +67,24 @@
     <!----------------------------------------- Header end ------------------------------------------>
 
     <!----------------------------------------- home page ----------------------------------------->
-    <section class="home-page section" id="home">
-      <div class="d-flex flex-column align-items-center">
-        <h1 class="name-text">Larry Nguyen</h1>
-        <h3 class="iOS-text">iOS developer</h3>
-
-        <img
-          src="/img/LN.jpg"
-          alt="picture of Larry"
-          class="img-fluid rounded-circle profile-picture"
-        />
-
-        <div class="container">
-          <h3 class="about-text text-center">
-            Self-taught iOS developer located in the San Francisco Bay Area.
+    <section class="home-page section d-flex align-items-center" id="home">
+      <div class="container">
+        <div class="row">
+          <h2 class="about-text">Hi, my name is</h2>
+          <h1 class="name-text">Larry Nguyen</h1>
+          <h3 class="about-text">
+            Self-taught <strong>iOS developer</strong> with a background in
+            healthcare
           </h3>
-        </div>
-
-        <div class="site-button">
-          <button type="button" class="btn default">
-            <a href="https://github.com/larryn35/" class="text-reset">github</a>
-          </button>
-          <button type="button" class="btn default">resume</button>
+          <h3 class="about-text">Based in the San Francisco Bay Area</h3>
+          <div class="site-button">
+            <button type="button" class="btn default">
+              <a href="https://github.com/larryn35/" class="text-reset"
+                >github</a
+              >
+            </button>
+            <button type="button" class="btn default">resume</button>
+          </div>
         </div>
       </div>
     </section>
@@ -108,7 +108,7 @@
               <h1>Hello World</h1>
             </div>
             <h3 class="portfolio-text">
-              An simple, realtime chat app for iOS. Sign up with an email and
+              A simple, realtime chat app for iOS. Sign up with an email and
               password and start chatting with friends and family.
               <br /><br />
               Built with SwiftUI and Firebase.
@@ -127,7 +127,11 @@
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
-            <img src="/img/HelloWorld/1.png" alt="" class="app-screenshot" />
+            <img
+              src="/img/HelloWorld/HW-mockup.png"
+              alt=""
+              class="app-screenshot"
+            />
           </div>
         </div>
       </div>
@@ -139,23 +143,34 @@
       <div class="container">
         <h1 class="about-title text-start">about me</h1>
 
-        <div class="row d-flex justify-content-center">
-          <h3 class="about-text">
-            I am a self-taught iOS developer located in the San Francisco Bay
-            Area. I started coding about a year ago, originally as a hobby. That
-            interest continued to grow as I learned the ins and outs of the
-            language - from variables, to loops, to classes and dictionaries. I
-            learned how to use pandas and Plotly to analyze and visualize data
-            and later began learning HTML and CSS so I could build websites.
-            Learning to code has been a challenging, yet very rewarding
-            experience thus far. From print("Hello, World!") to building
-            websites and games, it is a great feeling to see something you
-            envision come to life with some (or many) lines of code. I look
-            forward to continuing this journey and hope to one day make
-            something that would improve the lives of others. In my free time, I
-            enjoy watching and playing sports, photography, and listening to
-            music.
-          </h3>
+        <div class="row">
+          <div class="col-md-8 col-sm-12">
+            <h3 class="about-text">
+              My interest in programming began shortly after graduating pharmacy
+              school. With more free time on my hands, I wanted to learn a new
+              skill and chose coding as a hobby. I started with Python, then
+              explored web development with HTML/CSS/JS, and then finally came
+              across Swift. The language’s clear syntax and safe-guards, and
+              being able to see your code come to life in XCode, made Swift
+              approachable.
+              <br /><br />
+              I spent the last 7 months learning Swift and building small apps
+              through online courses, articles, and YouTube videos. It has led
+              me to become a better problem-solver by encouraging me to tackle
+              complex problems by breaking it down to smaller, more manageable
+              ones. Learning to code has been a challenging, yet very rewarding
+              experience thus far. It has served as a creative outlet and I look
+              forward to continuing this journey and hope to turn what started
+              as a hobby into a career.
+            </h3>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <img
+              src="/img/LN.jpg"
+              alt="picture of Larry"
+              class="img-fluid rounded-circle profile-picture"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -164,19 +179,58 @@
     <!----------------------------------------- contact page ----------------------------------------->
     <section class="contact-page section" id="contact">
       <div class="container">
-        <h1 class="contact-title text-start">contact</h1>
+        <h1 class="contact-title text-start">get in touch</h1>
+        <h3>
+          Thanks for dropping by. Have any questions or just want want to say
+          hello, leave a message and I'll try to get back to you as soon as I
+          can.
+        </h3>
+        <button class="btn">Say hello</button>
 
-        <div class="row d-flex justify-content-center">
-          <h3 class="contact-text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque,
-            quas! Non explicabo a a a a a a a a a mollitia consectetur eveniet
-            rerum facere dolor impedit ullam voluptatibus in, cum quis,
-            laudantium tempore officia. Sit at eius ut maxime aliquid vel
-            corporis rem assumenda voluptatum? Nam, quasi.
-          </h3>
-        </div>
+        <!-- <form action="https://formspree.io/example@gmail.com" method="POST">
+          <input
+            type="hidden"
+            name="_subject"
+            value="Someone sent you a message!"
+          />
+
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              id="name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              name="_replyto"
+              class="form-control"
+              id="email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="body" id="message" class="form-control"></textarea>
+          </div>
+
+          <input
+            type="submit"
+            value="Send message"
+            class="btn float-right"
+            required
+          />
+        </form> -->
       </div>
     </section>
+
     <!----------------------------------------- contact page end ----------------------------------------->
 
     <!----------------------------------------- JS ----------------------------------------->
