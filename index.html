@@ -61,6 +61,9 @@
               </ul>
             </div>
           </div>
+          <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+          </div>
         </nav>
       </div>
     </header>
@@ -70,20 +73,32 @@
     <section class="home-page section d-flex align-items-center" id="home">
       <div class="container">
         <div class="row">
-          <h2 class="about-text">Hi, my name is</h2>
-          <h1 class="name-text">Larry Nguyen</h1>
-          <h3 class="about-text">
-            Self-taught <strong>iOS developer</strong> with a background in
-            healthcare
-          </h3>
-          <h3 class="about-text">Based in the San Francisco Bay Area</h3>
-          <div class="site-button">
-            <button type="button" class="btn default">
-              <a href="https://github.com/larryn35/" class="text-reset"
-                >github</a
-              >
-            </button>
-            <button type="button" class="btn default">resume</button>
+          <div class="col-lg-8 col-md-12">
+            <h2 class="about-text">Hi, my name is</h2>
+            <h1 class="name-text">Larry Nguyen</h1>
+            <h3 class="about-text">
+              Self-taught <strong>iOS developer</strong>
+              <br />
+              with a background in healthcare
+            </h3>
+            <h3 class="about-text">Based in the San Francisco Bay Area</h3>
+            <div class="site-button">
+              <button type="button" class="btn default">
+                <a
+                  href="https://github.com/larryn35/"
+                  class="text-reset"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >github</a
+                >
+              </button>
+              <button type="button" class="btn default">
+                <a href="" class="text-reset">resume</a>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <div id="icon-container"></div>
           </div>
         </div>
       </div>
@@ -93,21 +108,14 @@
     <!----------------------------------------- portfolio page ----------------------------------------->
     <section class="portfolio-page section" id="portfolio">
       <div class="portfolio container">
-        <h1 class="portfolio-title">portfolio</h1>
+        <h1 class="subtitle mb-5">portfolio</h1>
 
         <div class="row">
           <div class="col-md-6 col-sm-12">
-            <div
-              class="d-flex flex-row align-items-center justify-content-center"
-            >
-              <img
-                src="/img/HelloWorld/HW-icon.png"
-                alt="hello world app icon"
-                class="app-icon"
-              />
-              <h1>Hello World</h1>
+            <div class="d-flex align-items-center justify-content-end mb-3">
+              <h2>Hello World</h2>
             </div>
-            <h3 class="portfolio-text">
+            <h3 class="portfolio-text text-end">
               A simple, realtime chat app for iOS. Sign up with an email and
               password and start chatting with friends and family.
               <br /><br />
@@ -121,6 +129,8 @@
                 <a
                   href="https://github.com/larryn35/HelloWorld"
                   class="text-reset"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   >github repo</a
                 >
               </button>
@@ -141,7 +151,7 @@
     <!----------------------------------------- about me page ----------------------------------------->
     <section class="about-page section" id="about">
       <div class="container">
-        <h1 class="about-title text-start">about me</h1>
+        <h1 class="subtitle mb-5">about me</h1>
 
         <div class="row">
           <div class="col-md-8 col-sm-12">
@@ -179,62 +189,36 @@
     <!----------------------------------------- contact page ----------------------------------------->
     <section class="contact-page section" id="contact">
       <div class="container">
-        <h1 class="contact-title text-start">get in touch</h1>
+        <h1 class="subtitle mb-5">get in touch</h1>
         <h3>
           Thanks for dropping by. Have any questions or just want want to say
-          hello, leave a message and I'll try to get back to you as soon as I
+          hello? Leave a message and I'll try to get back to you as soon as I
           can.
         </h3>
-        <button class="btn">Say hello</button>
-
-        <!-- <form action="https://formspree.io/example@gmail.com" method="POST">
-          <input
-            type="hidden"
-            name="_subject"
-            value="Someone sent you a message!"
-          />
-
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input
-              type="text"
-              name="name"
-              class="form-control"
-              id="name"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input
-              type="email"
-              name="_replyto"
-              class="form-control"
-              id="email"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea name="body" id="message" class="form-control"></textarea>
-          </div>
-
-          <input
-            type="submit"
-            value="Send message"
-            class="btn float-right"
-            required
-          />
-        </form> -->
+        <button type="button" class="btn default">
+          <a
+            href="#"
+            class="text-reset"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Say hello</a
+          >
+        </button>
       </div>
     </section>
 
     <!----------------------------------------- contact page end ----------------------------------------->
 
+    <footer>
+      <div class="quote-block d-flex justify-content-center">
+        <div class="quote">It's a leap of faith. That's all it is. A leap of faith.</div>
+
+        <div class="author">Peter Parker | Into the Spiderverse</div>
+      </div>
+    </footer>
+
     <!----------------------------------------- JS ----------------------------------------->
-    <script src="/js/index.js"></script>
+    <script src="js/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
       integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
@@ -245,5 +229,18 @@
       integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <!-- <script src="lf30_editor_lctrzznd.json"></script> -->
+    <script>
+      var animation = bodymovin.loadAnimation({
+        // animationData: { /* ... */ },
+        container: document.getElementById("icon-container"), // required
+        path: "lf30_editor_lctrzznd.json", // required
+        renderer: "svg", // required
+        loop: true, // optional
+        autoplay: true, // optional
+        name: "Demo Animation", // optional
+      });
+    </script>
   </body>
 </html>

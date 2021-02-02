@@ -1,10 +1,10 @@
-/* variables */
+/* =============================================== variables */
 :root {
   --ff-primary: "Scope One", serif;
   --ff-secondary: "Montserrat", sans-serif;
 
   --clr-light: #f3f3f3;
-  --clr-dark: #276678;
+  --clr-dark: #181d1f;
   --clr-accent: #1687a7;
 
   --fs-title: 5rem;
@@ -27,7 +27,7 @@
   }
 }
 
-/* general */
+/* =============================================== general */
 html,
 body {
   width: 100%;
@@ -46,6 +46,9 @@ h2 {
 h3 {
   font-size: var(--fs-h3);
 }
+a {
+  font-size: var(--fs-h3);
+}
 p {
   font-size: var(--fs-body);
 }
@@ -55,24 +58,27 @@ p {
   min-height: 100%;
 }
 
-
+.subtitle {
+  color: var(--clr-accent);
+  font-family: var(--ff-primary);
+}
 
 /* general end */
 
-/* buttons */
+/* =============================================== buttons */
 .btn {
-  border: 1px solid black;
+  border: 1px solid var(--clr-dark);
   background-color: white;
-  margin: 20px 10px;
-  color: black;
+  margin: 20px 10px 20px 0;
+  color: var(--clr-dark);
   font-size: 16px;
   transition: color 0.6s ease-in-out, border-color 0.6s ease-in-out;
   cursor: pointer;
 }
 
 .default {
-  border-color: black;
-  color: black;
+  border-color: lightgray;
+  color: var(--clr-dark);
 }
 
 .default:hover {
@@ -81,7 +87,7 @@ p {
 }
 /* buttons end */
 
-/* nav bar */
+/* =============================================== nav bar */
 /* .navbar-custom {
   background-color: #070f18;
 } */
@@ -107,27 +113,45 @@ p {
 .header-area .main-menu .nav-item.active a {
   color: var(--clr-accent);
 }
+
+.progress-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.89);
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 2px;
+  background: var(--clr-accent);
+  width: 0%;
+}
+
 /* nav bar end */
 
-/* home page area */
+/* =============================================== home page area */
 .home-page .name-text {
   color: var(--clr-accent);
   font-size: var(--fs-title);
   font-family: var(--ff-primary);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-.home-page .about-text {
-  color: black;
-}
+/* .home-page .about-text {
+  color: var(--clr-dark);
+} */
 /* home page end */
 
-/* portfolio */
+/* =============================================== portfolio */
 .portfolio-page {
-  background-color: rgb(48, 48, 122);
+  /* background-color: rgb(48, 48, 122); */
 }
 
 .portfolio-page .container {
-  background-color: rgb(105, 105, 138);
+  /* background-color: rgb(105, 105, 138); */
 }
 
 .portfolio-page .portfolio .app-icon {
@@ -137,34 +161,73 @@ p {
 }
 
 .portfolio-page .portfolio .app-screenshot {
-  max-width: 80%;
+  max-width: 100%;
 }
-
 /* portfolio end */
 
-/* about */
+/* =============================================== about */
 
 .about-page {
-  background-color: rgb(20, 83, 28);
+  /* background-color: rgb(20, 83, 28); */
 }
 
 .about-page .container {
-  background-color: rgb(112, 189, 135);
+  /* background-color: rgb(112, 189, 135); */
 }
 /* about end */
 
-/* contact */
+/* =============================================== contact */
 
 .contact-page {
-  background-color: rgba(255, 0, 0, 0.247);
+  /* background-color: rgba(255, 0, 0, 0.247); */
 }
 
 .contact-page .container {
-  background-color: rgb(247, 232, 232);
+  /* background-color: rgb(247, 232, 232); */
 }
 /* contact end */
 
-/* ============== app detail page ============== */
+/* =============================================== footer */
+
+footer .quote-block {
+  width: 100%;
+  height: 2.5rem;
+}
+
+footer div {
+  transition: all .5s ease-in-out;
+  position: relative;
+}
+
+footer .quote {
+  position: absolute;
+  line-height: 18px;
+  font-size: 16px;
+  transform: translateY(0);
+}
+
+footer .author {
+  text-transform: uppercase;
+  line-height: 16px;
+  font-size: 12px;
+  opacity: 0;
+  position: absolute;
+  transform: translateY(-20px);
+}
+
+footer .quote-block:hover > .quote {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+footer .quote-block:hover > .author {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* footer end */
+
+/* =============================================== app detail page ============== */
 .app-detail .gif {
   width: 250px;
   height: auto;
@@ -172,11 +235,11 @@ p {
 }
 
 .app-detail .app-title {
-  background-color: coral;
+  /* background-color: coral; */
 }
 
 .app-detail .app-screenshot {
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
 }
 
 @media (max-width: 768px) {
@@ -187,4 +250,4 @@ p {
     margin-right: auto;
   }
 }
-/* ============== app detail page ============== */
+/* =============================================== app detail page ============== */
