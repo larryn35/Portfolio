@@ -20,7 +20,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Scope+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Scope+One&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -72,16 +72,16 @@
     <!----------------------------------------- home page ----------------------------------------->
     <section class="home-page section d-flex align-items-center" id="home">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-12">
+        <div class="row align-items-center">
+          <div class="col-lg-7 col-md-8 col-sm-12">
             <h2 class="about-text">Hi, my name is</h2>
             <h1 class="name-text">Larry Nguyen</h1>
             <h3 class="about-text">
-              Self-taught <strong>iOS developer</strong>
-              <br />
-              with a background in healthcare
+              Self-taught iOS developer
+              <br>
+              Background in healthcare
             </h3>
-            <h3 class="about-text">Based in the San Francisco Bay Area</h3>
+            <h3 class="about-text">Located in the San Francisco Bay Area</h3>
             <div class="site-button">
               <button type="button" class="btn default">
                 <a
@@ -97,7 +97,7 @@
               </button>
             </div>
           </div>
-          <div class="col-lg-4 col-md-12">
+          <div class="col-lg-5 col-md-4 col-sm-12">
             <div id="icon-container"></div>
           </div>
         </div>
@@ -110,18 +110,26 @@
       <div class="portfolio container">
         <h1 class="subtitle mb-5">portfolio</h1>
 
-        <div class="row">
+        <div class="row project-block">
           <div class="col-md-6 col-sm-12">
-            <div class="d-flex align-items-center justify-content-end mb-3">
+            <img
+              src="/img/HelloWorld/HW-mockup.png"
+              alt=""
+              class="app-screenshot img-fluid"
+            />
+          </div>
+
+          <div class="col-md-6 col-sm-12">
+            <div class="d-flex align-items-center mb-3">
               <h2>Hello World</h2>
             </div>
-            <h3 class="portfolio-text text-end">
+            <h3 class="portfolio-text">
               A simple, realtime chat app for iOS. Sign up with an email and
               password and start chatting with friends and family.
               <br /><br />
               Built with SwiftUI and Firebase.
             </h3>
-            <div class="p-4">
+            <div>
               <button type="button" class="btn default">
                 <a href="/helloworld.html" class="text-reset">read more</a>
               </button>
@@ -135,13 +143,6 @@
                 >
               </button>
             </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <img
-              src="/img/HelloWorld/HW-mockup.png"
-              alt=""
-              class="app-screenshot"
-            />
           </div>
         </div>
       </div>
@@ -211,7 +212,9 @@
 
     <footer>
       <div class="quote-block d-flex justify-content-center">
-        <div class="quote">It's a leap of faith. That's all it is. A leap of faith.</div>
+        <div class="quote">
+          It's a leap of faith. That's all it is. A leap of faith.
+        </div>
 
         <div class="author">Peter Parker | Into the Spiderverse</div>
       </div>

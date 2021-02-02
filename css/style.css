@@ -13,15 +13,39 @@
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
 
+  --sm-size: 768px;
+  --md-size: 992px;
+  --lg-size: 1200px;
+
   --box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
     0.125em 00.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  :root {
+    --fs-title: 4rem;
+    --fs-h1: 2rem;
+    --fs-h2: 1.5rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+  }
+}
+
+/* @media (max-width: 768px) {
+  :root {
+    --fs-title: 4rem;
+    --fs-h1: 2.5rem;
+    --fs-h2: 1.5rem;
+    --fs-h3: 1rem;
+    --fs-body: 1rem;
+  }
+} */
+
+@media (max-width: 575px) {
   :root {
     --fs-title: 3rem;
     --fs-h1: 2rem;
-    --fs-h2: 1.5rem;
+    --fs-h2: 1.25rem;
     --fs-h3: 1rem;
     --fs-body: 1rem;
   }
@@ -61,6 +85,10 @@ p {
 .subtitle {
   color: var(--clr-accent);
   font-family: var(--ff-primary);
+}
+
+.test-container {
+  background-color: yellow;
 }
 
 /* general end */
@@ -140,9 +168,16 @@ p {
   padding-bottom: 1rem;
 }
 
-/* .home-page .about-text {
-  color: var(--clr-dark);
-} */
+.home-page #icon-container {
+  max-height: 90%;
+}
+
+@media (max-width: 768px) {
+  .home-page #icon-container {
+    display: none;
+  }
+}
+
 /* home page end */
 
 /* =============================================== portfolio */
@@ -154,15 +189,11 @@ p {
   /* background-color: rgb(105, 105, 138); */
 }
 
-.portfolio-page .portfolio .app-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
+.portfolio-page .project-block {
+  background-color: white;
+  border-radius: 1rem;
 }
 
-.portfolio-page .portfolio .app-screenshot {
-  max-width: 100%;
-}
 /* portfolio end */
 
 /* =============================================== about */
@@ -192,37 +223,41 @@ p {
 footer .quote-block {
   width: 100%;
   height: 2.5rem;
+  font-family: var(--ff-primary);
 }
 
 footer div {
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   position: relative;
 }
 
 footer .quote {
   position: absolute;
-  line-height: 18px;
-  font-size: 16px;
+  line-height: 1.5rem;
+  font-size: 1rem;
   transform: translateY(0);
 }
 
 footer .author {
   text-transform: uppercase;
-  line-height: 16px;
-  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  font-size: 0.8rem;
   opacity: 0;
   position: absolute;
-  transform: translateY(-20px);
+  transform: translateY(-2rem);
+  color: var(--clr-accent);
 }
 
 footer .quote-block:hover > .quote {
-  transform: translateY(20px);
+  transform: translateY(1rem);
   opacity: 0;
 }
 
 footer .quote-block:hover > .author {
   opacity: 1;
   transform: translateY(0);
+  letter-spacing: 0.2rem;
 }
 
 /* footer end */
