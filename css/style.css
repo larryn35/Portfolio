@@ -10,8 +10,8 @@
   --fs-title: 5rem;
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
-  --fs-h3: 1.25rem;
-  --fs-body: 1rem;
+  --fs-h3: 1.75rem;
+  --fs-body: 1.25rem;
 
   --sm-size: 768px;
   --md-size: 992px;
@@ -24,22 +24,12 @@
 @media (max-width: 992px) {
   :root {
     --fs-title: 4rem;
-    --fs-h1: 2rem;
-    --fs-h2: 1.5rem;
-    --fs-h3: 1.25rem;
-    --fs-body: 1rem;
+    --fs-h1: 2.5rem;
+    --fs-h2: 1.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.25rem;
   }
 }
-
-/* @media (max-width: 768px) {
-  :root {
-    --fs-title: 4rem;
-    --fs-h1: 2.5rem;
-    --fs-h2: 1.5rem;
-    --fs-h3: 1rem;
-    --fs-body: 1rem;
-  }
-} */
 
 @media (max-width: 575px) {
   :root {
@@ -71,7 +61,7 @@ h3 {
   font-size: var(--fs-h3);
 }
 a {
-  font-size: var(--fs-h3);
+  font-size: var(--fs-body);
 }
 p {
   font-size: var(--fs-body);
@@ -99,7 +89,7 @@ p {
   background-color: white;
   margin: 20px 10px 20px 0;
   color: var(--clr-dark);
-  font-size: 16px;
+  font-size: var(--fs-body);
   transition: color 0.6s ease-in-out, border-color 0.6s ease-in-out;
   cursor: pointer;
 }
@@ -160,6 +150,10 @@ p {
 /* nav bar end */
 
 /* =============================================== home page area */
+.home-page .text-container {
+  z-index: 2;
+}
+
 .home-page .name-text {
   color: var(--clr-accent);
   font-size: var(--fs-title);
@@ -168,14 +162,41 @@ p {
   padding-bottom: 1rem;
 }
 
-.home-page #icon-container {
-  max-height: 90%;
+.home-page .lottie-anim {
+  z-index: 1;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  pointer-events: none;
+  opacity: 90%;
+}
+
+@media (max-width: 1382px) {
+  .home-page .lottie-anim {
+    opacity: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .home-page .lottie-anim {
+    opacity: 10%;
+  }
 }
 
 @media (max-width: 768px) {
-  .home-page #icon-container {
-    display: none;
+  .home-page .lottie-anim {
+    opacity: 5%;
   }
+}
+
+@media (max-width: 480px) {
+  .home-page .lottie-anim {
+    opacity: 0;
+  }
+}
+
+.home-page .lottie-anim {
+  transition: all 0.5s ease-in-out;
 }
 
 /* home page end */

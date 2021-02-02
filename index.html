@@ -71,36 +71,32 @@
 
     <!----------------------------------------- home page ----------------------------------------->
     <section class="home-page section d-flex align-items-center" id="home">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-7 col-md-8 col-sm-12">
-            <h2 class="about-text">Hi, my name is</h2>
-            <h1 class="name-text">Larry Nguyen</h1>
-            <h3 class="about-text">
-              Self-taught iOS developer
-              <br>
-              Background in healthcare
-            </h3>
-            <h3 class="about-text">Located in the San Francisco Bay Area</h3>
-            <div class="site-button">
-              <button type="button" class="btn default">
-                <a
-                  href="https://github.com/larryn35/"
-                  class="text-reset"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >github</a
-                >
-              </button>
-              <button type="button" class="btn default">
-                <a href="" class="text-reset">resume</a>
-              </button>
-            </div>
-          </div>
-          <div class="col-lg-5 col-md-4 col-sm-12">
-            <div id="icon-container"></div>
-          </div>
+
+      <div class="container text-container">
+          <h2 class="about-text">Hi, my name is</h2>
+          <h1 class="name-text">Larry Nguyen</h1>
+          <h3 class="about-text">
+            Self-taught iOS developer
+          </h3>
+          <h3 class="about-text">Based in the San Francisco Bay Area</h3>
+          <div class="site-button">
+            <button type="button" class="btn default">
+              <a
+                href="https://github.com/larryn35/"
+                class="text-reset"
+                target="_blank"
+                rel="noopener noreferrer"
+                >github</a
+              >
+            </button>
+            <button type="button" class="btn default">
+              <a href="" class="text-reset">resume</a>
+            </button>
         </div>
+      </div>
+
+      <div class="lottie-anim d-flex justify-content-end w-100">
+        <div id="icon-container"></div>
       </div>
     </section>
     <!----------------------------------------- home page end ----------------------------------------->
@@ -123,12 +119,12 @@
             <div class="d-flex align-items-center mb-3">
               <h2>Hello World</h2>
             </div>
-            <h3 class="portfolio-text">
+            <p class="portfolio-text">
               A simple, realtime chat app for iOS. Sign up with an email and
               password and start chatting with friends and family.
               <br /><br />
               Built with SwiftUI and Firebase.
-            </h3>
+            </p>
             <div>
               <button type="button" class="btn default">
                 <a href="/helloworld.html" class="text-reset">read more</a>
