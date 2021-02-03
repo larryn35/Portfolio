@@ -137,13 +137,13 @@ p {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 3px;
+  height: 4px;
   background: rgb(182, 182, 182);
 }
 
 /* The progress bar (scroll indicator) */
 .progress-bar {
-  height: 2px;
+  height: 3px;
   background: var(--clr-accent);
   width: 0%;
 }
@@ -216,6 +216,17 @@ p {
   background-color: rgb(255, 255, 255);
   border-radius: 1rem;
   box-shadow: var(--box-shadow);
+}
+/* carousel */
+.carousel-indicators .active{
+  background-color: var(--clr-accent);
+}
+.carousel-indicators li {
+  background-color: #181818;
+}
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+  filter: invert(100%);
 }
 
 .portfolio-page .app-title {
