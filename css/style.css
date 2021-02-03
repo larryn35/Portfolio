@@ -68,7 +68,7 @@ p {
 }
 
 .section {
-  padding-top: 70px;
+  padding-top: 90px;
   min-height: 100%;
 }
 
@@ -119,16 +119,17 @@ p {
 
 .header-area .main-menu .navbar .navbar-text {
   white-space: nowrap;
-  font-size: var(--fs-h3);
+  font-size: 1.25rem;
 }
 
 .header-area .main-menu .nav-item .nav-link {
+  font-size: 1.25rem;
 }
 
 .header-area .main-menu .nav-item .nav-link a:hover {
   color: var(--clr-accent);
 }
-.header-area .main-menu .nav-item.active a {
+.header-area .main-menu .nav-item .active {
   color: var(--clr-accent);
 }
 
@@ -136,8 +137,8 @@ p {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.89);
+  height: 3px;
+  background: rgb(182, 182, 182);
 }
 
 /* The progress bar (scroll indicator) */
@@ -211,8 +212,23 @@ p {
 }
 
 .portfolio-page .project-block {
-  background-color: white;
+  padding: 2rem;
+  background-color: rgb(255, 255, 255);
   border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.portfolio-page .app-title {
+  display: inline-block;
+  padding: 1rem 0;
+  border-bottom: 2px solid rgb(77, 11, 97);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 576px) {
+  .portfolio-page .project-block {
+    border-radius: 0;
+  }
 }
 
 /* portfolio end */
