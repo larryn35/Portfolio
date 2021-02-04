@@ -3,7 +3,7 @@
   --ff-primary: "Scope One", serif;
   --ff-secondary: "Montserrat", sans-serif;
 
-  --clr-light: #f3f3f3;
+  --clr-light: #f5f5f5;
   --clr-dark: #181d1f;
   --clr-accent: #1687a7;
 
@@ -18,7 +18,7 @@
   --lg-size: 1200px;
 
   --box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
-    0.125em 00.125em 0.25em rgba(0, 0, 0, 0.15);
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 992px) {
@@ -27,7 +27,7 @@
     --fs-h1: 2.5rem;
     --fs-h2: 1.75rem;
     --fs-h3: 1.5rem;
-    --fs-body: 1.25rem;
+    --fs-body: 1.2rem;
   }
 }
 
@@ -89,7 +89,7 @@ p {
   background-color: white;
   margin: 20px 10px 20px 0;
   color: var(--clr-dark);
-  font-size: var(--fs-body);
+  font-size: 1rem;
   transition: color 0.6s ease-in-out, border-color 0.6s ease-in-out;
   cursor: pointer;
 }
@@ -212,13 +212,15 @@ p {
 }
 
 .portfolio-page .project-block {
+  margin: 0;
   padding: 2rem;
-  background-color: rgb(255, 255, 255);
-  border-radius: 1rem;
-  box-shadow: var(--box-shadow);
+  /* background-color: rgb(255, 255, 255); */
+  border-radius: 10px;
+  /* box-shadow: var(--box-shadow); */
+  border: 2px solid lightgray;
 }
 /* carousel */
-.carousel-indicators .active{
+.carousel-indicators .active {
   background-color: var(--clr-accent);
 }
 .carousel-indicators li {
@@ -250,9 +252,102 @@ p {
   /* background-color: rgb(20, 83, 28); */
 }
 
-.about-page .container {
-  /* background-color: rgb(112, 189, 135); */
+.about-page .about-container {
+  background-color: #fdfdfd;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
 }
+
+.about-page .about-container img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.about-page .about-text {
+  margin-top: 2rem;
+}
+
+.about-page .interests {
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  color: rgb(177, 177, 177);
+}
+
+.about-page .interests .interests-title {
+  color: var(--clr-accent);
+}
+
+.about-page .interests i {
+  padding: 1rem 1rem 2rem 0;
+  transition: all .8s ease-in .5s;
+  height: 2rem;
+}
+
+.about-page .interests i > span {
+  height: 2rem;
+  z-index: -1;
+  font-size: 1rem;
+  overflow: hidden;
+  color: var(--clr-dark);
+  position: absolute;
+  transform: translateX(0);
+  padding-top: 2px;
+  opacity: 0%;
+  transition: all .2s ease-in;
+}
+
+.about-page .interests .fa-football-ball:hover {
+  color: rgb(103, 102, 124);
+  margin-right: 125px;
+  transition: all .4s ease-out;
+}
+
+.about-page .interests .fa-football-ball:hover > span {
+  transform: translateX(1.5rem);
+  z-index: 1;
+  opacity: 100%;
+  transition: opacity 2s .1s, transform 0.3s ease-out .3s;
+}
+
+.about-page .interests .fa-camera-retro:hover {
+  color: rgb(103, 102, 124);
+  margin-right: 125px;
+  transition: all .4s ease-out;
+}
+
+.about-page .interests .fa-camera-retro:hover > span {
+  transform: translateX(1.5rem);
+  z-index: 1;
+  opacity: 100%;
+  transition: opacity 2s .1s, transform 0.2s ease-out .3s;
+}
+
+.about-page .interests .fa-gamepad:hover {
+  color: rgb(103, 102, 124);
+  margin-right: 125px;
+  transition: all .4s ease-out;
+}
+
+.about-page .interests .fa-gamepad:hover > span {
+  transform: translateX(1.5rem);
+  z-index: 1;
+  opacity: 100%;
+  transition: opacity 2s .1s, transform 0.2s ease-out .3s;
+}
+
+.about-page .interests .fa-plane:hover {
+  color: rgb(103, 102, 124);
+  transition: all .4s ease-out;
+}
+
+.about-page .interests .fa-plane:hover > span {
+  transform: translateX(1.5rem);
+  z-index: 1;
+  opacity: 100%;
+  transition: opacity 2s, transform 0.2s ease-out .2s;
+}
+
 /* about end */
 
 /* =============================================== contact */
@@ -264,6 +359,7 @@ p {
 .contact-page .container {
   /* background-color: rgb(247, 232, 232); */
 }
+
 /* contact end */
 
 /* =============================================== footer */

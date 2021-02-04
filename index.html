@@ -110,7 +110,7 @@
           <div class="col-md-6 col-sm-12">
             <div
               id="carouselExampleIndicators"
-              class="carousel slide"
+              class="carousel slide d-flex flex-column h-100 justify-content-center"
               data-ride="carousel"
             >
               <ol class="carousel-indicators">
@@ -191,7 +191,7 @@
                 </p>
                 <div>
                   <button type="button" class="btn default">
-                    <a href="/helloworld.html" class="text-reset">read more</a>
+                    <a href="/helloworld.html" class="text-reset">details</a>
                   </button>
                   <button type="button" class="btn default">
                     <a
@@ -199,7 +199,7 @@
                       class="text-reset"
                       target="_blank"
                       rel="noopener noreferrer"
-                      >github repo</a
+                      >github</a
                     >
                   </button>
                 </div>
@@ -212,14 +212,13 @@
           <div class="col-md-6 col-sm-12">
             <div class="d-flex flex-column h-100 justify-content-center">
               <div>
-                <h2 class="app-title">Hello World</h2>
+                <h2 class="app-title">Rx Quiz</h2>
                 <p class="portfolio-text">
-                  A simple, realtime chat app for iOS. Sign up with an email and
-                  password and start chatting with friends and family.
+                  Study the brand and generic names for the top 200 drugs
                   <br /><br />
-                  Built with SwiftUI and Firebase.
+                  Currently in development
                 </p>
-                <div>
+                <!-- <div>
                   <button type="button" class="btn default">
                     <a href="/helloworld.html" class="text-reset">read more</a>
                   </button>
@@ -232,7 +231,7 @@
                       >github repo</a
                     >
                   </button>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -252,37 +251,48 @@
     <!----------------------------------------- about me page ----------------------------------------->
     <section class="about-page section" id="about">
       <div class="container">
-        <h1 class="subtitle mb-5">about me</h1>
+        <h1 class="subtitle mb-4">about me</h1>
 
-        <div class="row">
-          <div class="col-md-8 col-sm-12">
-            <p class="about-text">
-              My interest in programming began shortly after graduating pharmacy
-              school. With more free time on my hands, I wanted to learn a new
-              skill and chose coding as a hobby. I started with Python, then
-              explored web development with HTML/CSS/JS, and then finally came
-              across Swift. The language’s clear syntax and safe-guards, and
-              being able to see your code come to life in XCode, made Swift
-              approachable.
-              <br /><br />
-              I spent the last 7 months learning Swift and building small apps
-              through online courses, articles, and YouTube videos. It has led
-              me to become a better problem-solver by encouraging me to tackle
-              complex problems by breaking it down to smaller, more manageable
-              ones. Learning to code has been a challenging, yet very rewarding
-              experience thus far. It has served as a creative outlet and I look
-              forward to continuing this journey and hope to turn what started
-              as a hobby into a career.
-            </p>
+        <div class="about-container">
+          <div class="row justify-content-center mb-4">
+            <img src="img/LN.png" class="card-img rounded-circle" alt="..." />
           </div>
-          <div class="col-md-4 col-sm-12">
-            <img
-              src="/img/LN.jpg"
-              alt="picture of Larry"
-              class="img-fluid rounded-circle profile-picture"
-            />
+
+          <p class="about-text">
+            I grew up in the Bay Area and went to school at UC Irvine,
+            graduating with degrees in biology and chemistry. After receiving my
+            Doctor of Pharmacy degree (PharmD) at the University of Minnesota
+            College of Pharmacy, I continued to live and work in the Twin Cities
+            for a few years. It was during this time that I started learning to
+            code in my free time. I dabbled with Python and HTML/CSS/JS for a
+            bit before coming across Swift.
+          </p>
+          <p class="about-text">
+            During the pandemic, I returned to California and continued learning
+            Swift and building small apps through online courses, articles, and
+            YouTube videos. Programming has been a challenging, yet rewarding
+            experience so far - serving as a creative outlet and challenging me
+            to be a better problem-solver. I look forward to continuing this
+            journey and hope to turn what started as a hobby into a promising
+            career.
+          </p>
+
+        <div class="interests">
+
+          <h2 class="interests-title mb-2">interests</h2>
+
+          <div class="d-flex flex-row justify-content-start align-items-center">
+            
+            <i class="fas fa-football-ball"><span>go niners</span></i>
+            <i class="fas fa-camera-retro"><span>photography</span></i>
+            <i class="fas fa-gamepad"><span>videogames</span></i>
+            <i class="fas fa-plane"><span>travelling (pre-covid)</span></i>
+
           </div>
+
         </div>
+
+
       </div>
     </section>
     <!----------------------------------------- about me end ----------------------------------------->
@@ -290,7 +300,7 @@
     <!----------------------------------------- contact page ----------------------------------------->
     <section class="contact-page section" id="contact">
       <div class="container">
-        <h1 class="subtitle mb-5">get in touch</h1>
+        <h1 class="subtitle mb-5">contact</h1>
         <h3>
           Thanks for dropping by. Have any questions or just want want to say
           hello? Leave a message and I'll try to get back to you as soon as I
@@ -306,6 +316,7 @@
           >
         </button>
       </div>
+
     </section>
 
     <!----------------------------------------- contact page end ----------------------------------------->
@@ -316,7 +327,9 @@
           It's a leap of faith. That's all it is. A leap of faith.
         </div>
 
-        <div class="author">Peter Parker | Into the Spiderverse</div>
+        <div class="author">
+          Peter Parker | Spiderman: Into the Spider-verse
+        </div>
       </div>
     </footer>
 
