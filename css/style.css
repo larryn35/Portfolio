@@ -74,10 +74,6 @@ p {
   font-family: var(--ff-primary);
 }
 
-.test-container {
-  background-color: yellow;
-}
-
 /* general end */
 
 /* =============================================== buttons */
@@ -148,16 +144,23 @@ p {
 /* nav bar end */
 
 /* =============================================== home page area */
-.home-page .text-container {
-  z-index: 2;
-}
-
 .home-page .name-text {
   color: var(--clr-accent);
   font-size: var(--fs-title);
   font-family: var(--ff-primary);
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.home-page .description-container {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-page .description {
+  display: inline-block;
 }
 
 /* home page end */
@@ -230,7 +233,7 @@ p {
   color: rgb(177, 177, 177);
 }
 
-.about-page .interests-title {
+.about-page .subtitle-title {
   color: var(--clr-dark);
   margin: 1rem 0;
 }
@@ -272,12 +275,22 @@ p {
   transition: opacity 2s 0.6s, transform 0.3s ease-out 0.7s;
 }
 
+@media (max-width: 400px) {
+  .about-page .interests {
+    display: none;
+  }
+}
+
 /* about end */
 
 /* =============================================== contact */
 
 .contact-page {
   /* background-color: rgba(255, 0, 0, 0.247); */
+}
+
+.contact-page {
+  position: relative;
 }
 
 .contact-page .max-width {
@@ -323,51 +336,51 @@ p {
   background-color: pink;
 }
 
-/* contact end */
+@media (max-width: 450px) {
+  .contact-page .lottie {
+    display: none;
+  }
+}
 
-/* =============================================== footer */
-
-footer .quote-block {
+/* quote */
+.quote-block {
   width: 100%;
-  height: 2.5rem;
-  font-family: var(--ff-primary);
-}
-
-footer div {
-  transition: all 0.5s ease-in-out;
-  position: relative;
-}
-
-footer .quote {
+  font-size: 15px;
+  justify-content: center;
   position: absolute;
-  line-height: 1.5rem;
-  font-size: 1rem;
-  transform: translateY(0);
+  bottom: 1rem;
 }
 
-footer .author {
-  text-transform: uppercase;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  font-size: 0.8rem;
-  opacity: 0;
-  position: absolute;
-  transform: translateY(-2rem);
+.slider {
+  bottom: 0;
+  height: 30px;
+  overflow: hidden;
+}
+
+.slider div {
+  margin-top: 10px;
+  height: 1.5rem;
+  text-align: center;
+}
+
+.slider-author {
+  animation: slide 8s linear infinite;
   color: var(--clr-accent);
 }
 
-footer .quote-block:hover > .quote {
-  transform: translateY(1rem);
-  opacity: 0;
+@keyframes slide {
+  0% { margin-top: -100px;}
+  5% { margin-top: -65px;}
+  31% { margin-top: -65px;}
+  36% { margin-top: -30px;}
+  62% { margin-top: -30px;}
+  69% { margin-top: 5px;}
+  95% { margin-top: 5px;}
+  100% { margin-top: 25px;}
 }
+/* quote */
 
-footer .quote-block:hover > .author {
-  opacity: 1;
-  transform: translateY(0);
-  letter-spacing: 0.2rem;
-}
-
-/* footer end */
+/* contact end */
 
 /* =============================================== app detail page ============== */
 .app-detail .gif {
