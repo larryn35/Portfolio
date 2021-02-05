@@ -13,10 +13,6 @@
   --fs-h3: 1.75rem;
   --fs-body: 1.25rem;
 
-  --sm-size: 768px;
-  --md-size: 992px;
-  --lg-size: 1200px;
-
   --box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
@@ -35,8 +31,8 @@
   :root {
     --fs-title: 3rem;
     --fs-h1: 2rem;
-    --fs-h2: 1.25rem;
-    --fs-h3: 1rem;
+    --fs-h2: 1.5rem;
+    --fs-h3: 1.25rem;
     --fs-body: 1rem;
   }
 }
@@ -275,77 +271,83 @@ p {
 }
 
 .about-page .interests .interests-title {
-  color: var(--clr-accent);
+  color: var(--clr-dark);
 }
 
 .about-page .interests i {
   padding: 1rem 1rem 2rem 0;
-  transition: all .8s ease-in .5s;
+  transition: all 0.3s ease-in 0.2s;
   height: 2rem;
 }
 
 .about-page .interests i > span {
-  height: 2rem;
+  font-family: var(--ff-secondary);
   z-index: -1;
-  font-size: 1rem;
   overflow: hidden;
+
+  font-size: 1rem;
   color: var(--clr-dark);
+  height: 2rem;
+  padding-top: 4px;
+  padding-left: 0;
+  margin-left: 0;
+
   position: absolute;
   transform: translateX(0);
-  padding-top: 2px;
   opacity: 0%;
-  transition: all .2s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 .about-page .interests .fa-football-ball:hover {
-  color: rgb(103, 102, 124);
+  color: var(--clr-accent);
   margin-right: 125px;
-  transition: all .4s ease-out;
+  transition: opacity .3s,margin-right 0.4s ease-out .5s;
 }
 
 .about-page .interests .fa-football-ball:hover > span {
   transform: translateX(1.5rem);
   z-index: 1;
   opacity: 100%;
-  transition: opacity 2s .1s, transform 0.3s ease-out .3s;
+  transition: opacity 2s 0.6s, transform 0.3s ease-out .7s;
 }
 
-.about-page .interests .fa-camera-retro:hover {
-  color: rgb(103, 102, 124);
-  margin-right: 125px;
-  transition: all .4s ease-out;
+.about-page .interests .fa-camera-retro:hover,
+.fa-camera-retro:focus {
+  color: var(--clr-accent);
+  margin-right: 140px;
+  transition: opacity .3s,margin-right 0.4s ease-out .5s;
 }
 
 .about-page .interests .fa-camera-retro:hover > span {
   transform: translateX(1.5rem);
   z-index: 1;
   opacity: 100%;
-  transition: opacity 2s .1s, transform 0.2s ease-out .3s;
+  transition: opacity 2s 0.6s, transform 0.3s ease-out .7s;
 }
 
 .about-page .interests .fa-gamepad:hover {
-  color: rgb(103, 102, 124);
-  margin-right: 125px;
-  transition: all .4s ease-out;
+  color: var(--clr-accent);
+  margin-right: 140px;
+  transition: opacity .3s,margin-right 0.4s ease-out .5s;
 }
 
 .about-page .interests .fa-gamepad:hover > span {
   transform: translateX(1.5rem);
   z-index: 1;
   opacity: 100%;
-  transition: opacity 2s .1s, transform 0.2s ease-out .3s;
+  transition: opacity 2s 0.6s, transform 0.3s ease-out .7s;
 }
 
 .about-page .interests .fa-plane:hover {
-  color: rgb(103, 102, 124);
-  transition: all .4s ease-out;
+  color: var(--clr-accent);
+  transition: opacity .3s,margin-right 0.4s ease-out .5s;
 }
 
 .about-page .interests .fa-plane:hover > span {
   transform: translateX(1.5rem);
   z-index: 1;
   opacity: 100%;
-  transition: opacity 2s, transform 0.2s ease-out .2s;
+  transition: opacity 2s 0.6s, transform 0.3s ease-out .7s;
 }
 
 /* about end */
@@ -358,6 +360,33 @@ p {
 
 .contact-page .container {
   /* background-color: rgb(247, 232, 232); */
+}
+
+.contact-page h1 {
+  padding-top: 10%;
+  color: var(--clr-accent);
+  font-family: var(--ff-primary);
+}
+
+.contact-page p {
+  margin: 2rem 0;
+}
+
+.contact-page strong {
+  color: coral;
+}
+
+.contact-page .contact-methods a {
+  margin-bottom: 1rem;
+}
+
+.contact-page .contact-methods a:hover i {
+  color: var(--clr-accent);
+}
+
+.contact-page .contact-methods i {
+  margin-right: 1rem;
+  width: 1.2rem;
 }
 
 /* contact end */
