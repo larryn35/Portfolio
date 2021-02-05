@@ -5,7 +5,8 @@
 
   --clr-light: #f5f5f5;
   --clr-dark: #181d1f;
-  --clr-accent: #1687a7;
+  --clr-accent: #10697f;
+  --clr-accent-2: #2d93ad;
 
   --fs-title: 5rem;
   --fs-h1: 3rem;
@@ -96,8 +97,8 @@ p {
 }
 
 .default:hover {
-  border-color: var(--clr-accent);
-  color: var(--clr-accent);
+  border-color: var(--clr-accent-2);
+  color: var(--clr-accent-2);
 }
 /* buttons end */
 
@@ -122,8 +123,8 @@ p {
   font-size: 1.25rem;
 }
 
-.header-area .main-menu .nav-item .nav-link a:hover {
-  color: var(--clr-accent);
+.header-area .main-menu .nav-item .nav-link:hover {
+  color: var(--clr-accent-2);
 }
 .header-area .main-menu .nav-item .active {
   color: var(--clr-accent);
@@ -157,43 +158,6 @@ p {
   font-family: var(--ff-primary);
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.home-page .lottie-anim {
-  z-index: 1;
-  position: absolute;
-  width: 80%;
-  height: 80%;
-  pointer-events: none;
-  opacity: 90%;
-}
-
-@media (max-width: 1382px) {
-  .home-page .lottie-anim {
-    opacity: 100%;
-  }
-}
-
-@media (max-width: 992px) {
-  .home-page .lottie-anim {
-    opacity: 10%;
-  }
-}
-
-@media (max-width: 768px) {
-  .home-page .lottie-anim {
-    opacity: 5%;
-  }
-}
-
-@media (max-width: 480px) {
-  .home-page .lottie-anim {
-    opacity: 0;
-  }
-}
-
-.home-page .lottie-anim {
-  transition: all 0.5s ease-in-out;
 }
 
 /* home page end */
@@ -260,18 +224,15 @@ p {
   max-height: 300px;
 }
 
-.about-page .about-text {
-  margin-top: 2rem;
-}
-
 .about-page .interests {
   margin-top: 4rem;
   font-size: 1.5rem;
   color: rgb(177, 177, 177);
 }
 
-.about-page .interests .interests-title {
+.about-page .interests-title {
   color: var(--clr-dark);
+  margin: 1rem 0;
 }
 
 .about-page .interests i {
@@ -298,56 +259,17 @@ p {
   transition: all 0.1s ease-in;
 }
 
-.about-page .interests .fa-football-ball:hover {
-  color: var(--clr-accent);
-  margin-right: 125px;
-  transition: opacity .3s,margin-right 0.4s ease-out .5s;
-}
-
-.about-page .interests .fa-football-ball:hover > span {
-  transform: translateX(1.5rem);
-  z-index: 1;
-  opacity: 100%;
-  transition: opacity 2s 0.6s, transform 0.3s ease-out .7s;
-}
-
-.about-page .interests .fa-camera-retro:hover,
-.fa-camera-retro:focus {
-  color: var(--clr-accent);
+.about-page .interests i:hover {
+  color: var(--clr-accent-2);
   margin-right: 140px;
-  transition: opacity .3s,margin-right 0.4s ease-out .5s;
+  transition: opacity 0.3s, margin-right 0.4s ease-out 0.5s;
 }
 
-.about-page .interests .fa-camera-retro:hover > span {
+.about-page .interests i:hover > span {
   transform: translateX(1.5rem);
   z-index: 1;
   opacity: 100%;
-  transition: opacity 2s 0.6s, transform 0.3s ease-out .7s;
-}
-
-.about-page .interests .fa-gamepad:hover {
-  color: var(--clr-accent);
-  margin-right: 140px;
-  transition: opacity .3s,margin-right 0.4s ease-out .5s;
-}
-
-.about-page .interests .fa-gamepad:hover > span {
-  transform: translateX(1.5rem);
-  z-index: 1;
-  opacity: 100%;
-  transition: opacity 2s 0.6s, transform 0.3s ease-out .7s;
-}
-
-.about-page .interests .fa-plane:hover {
-  color: var(--clr-accent);
-  transition: opacity .3s,margin-right 0.4s ease-out .5s;
-}
-
-.about-page .interests .fa-plane:hover > span {
-  transform: translateX(1.5rem);
-  z-index: 1;
-  opacity: 100%;
-  transition: opacity 2s 0.6s, transform 0.3s ease-out .7s;
+  transition: opacity 2s 0.6s, transform 0.3s ease-out 0.7s;
 }
 
 /* about end */
@@ -358,8 +280,11 @@ p {
   /* background-color: rgba(255, 0, 0, 0.247); */
 }
 
-.contact-page .container {
+.contact-page .max-width {
   /* background-color: rgb(247, 232, 232); */
+  max-width: 800px;
+  margin: auto;
+  padding: 0 1rem;
 }
 
 .contact-page h1 {
@@ -373,7 +298,11 @@ p {
 }
 
 .contact-page strong {
-  color: coral;
+  color: var(--clr-accent);
+}
+
+.contact-page strong:hover {
+  color: var(--clr-accent-2);
 }
 
 .contact-page .contact-methods a {
@@ -381,12 +310,17 @@ p {
 }
 
 .contact-page .contact-methods a:hover i {
-  color: var(--clr-accent);
+  color: var(--clr-accent-2);
 }
 
 .contact-page .contact-methods i {
   margin-right: 1rem;
   width: 1.2rem;
+}
+
+.testbox {
+  padding: 50px;
+  background-color: pink;
 }
 
 /* contact end */
@@ -459,3 +393,72 @@ footer .quote-block:hover > .author {
   }
 }
 /* =============================================== app detail page ============== */
+
+/* =============================================== animations ============== */
+
+/* appear on scroll */
+
+.move-up {
+  opacity: 0;
+  transform: translateY(4em);
+  transition: transform 2s 0.25s cubic-bezier(0, 1, 0.3, 1),
+    opacity 0.3s 0.25s ease-out;
+  will-change: transform, opacity;
+}
+
+.move-left {
+  opacity: 0;
+  transform: translateX(4em);
+  transition: transform 1s 0.25s cubic-bezier(0, 1, 0.3, 1),
+    opacity 0.3s 0.25s ease-out;
+  will-change: transform, opacity;
+}
+
+.move-right {
+  opacity: 0;
+  transform: translateX(-4em);
+  transition: transform 2s 0.25s cubic-bezier(0, 1, 0.3, 1),
+    opacity 0.3s 0.25s ease-out;
+  will-change: transform, opacity;
+}
+
+.move-up.is-visible,
+.move-left.is-visible,
+.move-right.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* home animations on load */
+#dropDown {
+  animation: dropDown 1.5s cubic-bezier(0, 1, 0.3, 1) 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes dropDown {
+  from {
+    transform: translateY(-70px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+#fadeIn {
+  position: relative;
+  animation-name: fadein;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* =============================================== animations ============== */

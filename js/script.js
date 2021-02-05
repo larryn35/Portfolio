@@ -1,10 +1,11 @@
-// Display scroll progress
-// Code from w3schools @ https://www.w3schools.com/howto/howto_js_scroll_indicator.asp
 window.onscroll = function () {
-  myFunction();
+  scrollProgressFunction();
+  activeNavLinksFunction();
 };
 
-function myFunction() {
+// Display scroll progress
+// Code from w3schools @ https://www.w3schools.com/howto/howto_js_scroll_indicator.asp
+function scrollProgressFunction() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height =
     document.documentElement.scrollHeight -
@@ -12,17 +13,6 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
-
-// Lottie
-var animation = bodymovin.loadAnimation({
-  // animationData: { /* ... */ },
-  container: document.getElementById("icon-container"), // required
-  path: "./lottie.json", // required
-  renderer: "svg", // required
-  loop: true, // optional
-  autoplay: true, // optional
-  name: "Demo Animation", // optional
-});
 
 // Change active navbar link on scroll/click
 // Code by Elena Scherer @ https://codepen.io/eksch/pen/xwdOeK
@@ -51,15 +41,58 @@ $(document).ready(function () {
 
 // Assign active class to nav links while scolling
 // Code by Elena Scherer @ https://codepen.io/eksch/pen/xwdOeK
-$(window)
-  .scroll(function () {
-    var scrollDistance = $(window).scrollTop();
 
-    $(".section").each(function (i) {
-      if ($(this).position().top <= scrollDistance) {
-        $(".nav-item a").removeClass("active");
-        $(".nav-item a").eq(i).addClass("active");
-      }
-    });
-  })
-  .scroll();
+function activeNavLinksFunction() {
+  var scrollDistance = $(window).scrollTop();
+
+  $(".section").each(function (i) {
+    if ($(this).position().top <= scrollDistance) {
+      $(".nav-item a").removeClass("active");
+      $(".nav-item a").eq(i).addClass("active");
+    }
+  });
+}
+
+// Show elements on scroll
+// Code by CSS Animation @ https://cssanimation.rocks/scroll-animations/
+
+// Detect request animation frame
+var scroll =
+  window.requestAnimationFrame ||
+  // IE Fallback
+  function (callback) {
+    window.setTimeout(callback, 1000 / 60);
+  };
+var elementsToShow = document.querySelectorAll(".show-on-scroll");
+
+function loop() {
+  Array.prototype.forEach.call(elementsToShow, function (element) {
+    if (isElementInViewport(element)) {
+      element.classList.add("is-visible");
+    }
+  });
+
+  scroll(loop);
+}
+
+// Call the loop for the first time
+loop();
+
+// Helper function from: http://stackoverflow.com/a/7557433/274826
+function isElementInViewport(el) {
+  // special bonus for those using jQuery
+  if (typeof jQuery === "function" && el instanceof jQuery) {
+    el = el[0];
+  }
+  var rect = el.getBoundingClientRect();
+  return (
+    (rect.top <= 0 && rect.bottom >= 0) ||
+    (rect.bottom >=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.top <=
+        (window.innerHeight || document.documentElement.clientHeight)) ||
+    (rect.top >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight))
+  );
+}
