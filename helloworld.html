@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello</title>
+    <title>Larry Nguyen</title>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
@@ -11,22 +11,37 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
     <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Scope+One&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+
+    <link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Scope+One&display=swap&display=swap" />
+
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Scope+One&display=swap&display=swap"
+      media="print" onload="this.media='all'" />
+
+    <noscript>
+      <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Scope+One&display=swap&display=swap" />
+     </noscript>
+
   </head>
 
   <body>
-    <!-- Header -->
+    <!----------------------------------------- Header ----------------------------------------->
     <header class="header-area">
       <div class="main-menu">
-        <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-white">
+        <nav class="navbar fixed-top navbar-expand-sm bg-white">
           <div class="container">
             <span class="navbar-text"> LN </span>
             <button
@@ -38,75 +53,296 @@
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span>
+                <i class="fas fa-bars" style="font-size: 1.25rem"></i>
+              </span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <div class="me-auto"></div>
               <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html#home">Home</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="/index.html#home">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html#portfolio">Portfolio</a>
+                  <a class="nav-link" href="/index.html#portfolio">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html#about">About</a>
+                  <a class="nav-link" href="/index.html#about">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html#contact">Contact</a>
+                  <a class="nav-link" href="#contact">Contact</a>
                 </li>
               </ul>
             </div>
           </div>
+          <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+          </div>
         </nav>
       </div>
     </header>
-    <!-- Header end -->
+    <!----------------------------------------- Header end ------------------------------------------>
 
-    <!-- Project -->
-    <section class="app-detail">
-      <div class="container">
-        <div class="d-flex justify-content-center">
-          <h1>Hello World</h1>
-          <img src="/img/HelloWorld/HW-icon.png" class="icon" alt="" />
-        </div>
-        <div class="row app-screenshot">
+    <!----------------------------------------- portfolio page ----------------------------------------->
+    <section class="portfolio-page section">
+      <div class="portfolio container">
+        <h1 class="subtitle mb-5">hello world</h1>
+
+        <!-- app 1 -->
+        <div class="row project-block mb-5">
+          <!------------------------- screenshot carousel ------------------------->
           <div class="col-md-6 col-sm-12">
-            <img src="/img/HelloWorld/1.gif" class="gif" alt="" />
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide d-flex flex-column h-100 justify-content-center move-right show-on-scroll"
+              data-bs-ride="carousel"
+            >
+              <ol class="carousel-indicators">
+                <li
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                ></li>
+                <li
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                ></li>
+                <li
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                ></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    class="d-block w-100"
+                    src="img/HelloWorld/HW-mockup.png"
+                    alt="First slide"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="d-block w-100"
+                    src="img/HelloWorld/HW-mockup.png"
+                    alt="Second slide"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="d-block w-100"
+                    src="img/HelloWorld/HW-mockup.png"
+                    alt="Third slide"
+                  />
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only"></span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only"></span>
+              </a>
+            </div>
           </div>
+          <!------------------------- screenshot carousel end ------------------------->
+
           <div class="col-md-6 col-sm-12">
-            <h3>
-              With this app, I wanted to practice working with a new database
-              and creating UI/UX skills. I chose to use Firebase since I hadn’t
-              worked with it before and it offered realtime storing and syncing
-              of data - which is ideal for a chat app. For setting up Firebase,
-              I followed Nathan Luu’s video on creating an iOS chat app. I
-              expanded on his version by adding features such as storing profile
-              pictures, recording timestamps of messages, and tracking the
-              number of unread messages for a chatroom. I also focused on a
-              clean design for the UI. While there is plenty of room for
-              improvement, I was happy with the app. What I learnt: Firebase
-              Storage, Authentication, and Cloud Firestore SDWebImageSwiftUI
-              ImagePicker and UIViewControllerRepresentable Passing data with: @EnvironmentObject, @StateObject, and
-              @ObservedObject
-            </h3>
+            <div class="d-flex flex-column h-100 justify-content-center">
+              <div>
+                <h2 class="app-title">Hello World</h2>
+                <p class="portfolio-text">
+                  A simple, realtime chat app for iOS. Sign up with an email and
+                  password and start chatting with friends and family.
+                  <br /><br />
+                  Built with SwiftUI and Firebase.
+                </p>
+                <div>
+                  <button type="button" class="btn default">
+                    <a href="/helloworld.html" class="text-reset">details</a>
+                  </button>
+                  <button type="button" class="btn default">
+                    <a
+                      href="https://github.com/larryn35/HelloWorld"
+                      class="text-reset"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >github</a
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- app 1 end -->
+
+        <!-- app 2 -->
+        <div class="row project-block">
+          <div class="col-md-6 col-sm-12">
+            <div class="d-flex flex-column h-100 justify-content-center">
+              <div>
+                <h2 class="app-title">Rx Quiz</h2>
+                <p class="portfolio-text">
+                  Study the brand and generic names for the top 200 drugs
+                  <br /><br />
+                  Currently in development
+                </p>
+                <!-- <div>
+                  <button type="button" class="btn default">
+                    <a href="/helloworld.html" class="text-reset">read more</a>
+                  </button>
+                  <button type="button" class="btn default">
+                    <a
+                      href="https://github.com/larryn35/HelloWorld"
+                      class="text-reset"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >github repo</a
+                    >
+                  </button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <!------------------------- screenshot carousel ------------------------->
+
+          <div class="col-md-6 col-sm-12 ">
+            <img
+              src="/img/HelloWorld/HW-mockup.png"
+              alt=""
+              class="app-screenshot img-fluid move-left show-on-scroll"
+            />
+          </div>
+          <!------------------------- screenshot carousel end ------------------------->
+
+        </div>
+        <!-- app 2 end -->
+      </div>
+    </section>
+    <!----------------------------------------- portfolio page end ----------------------------------------->
+
+    <!----------------------------------------- contact page ----------------------------------------->
+    <section class="contact-page section wave-container" id="contact">
+      <div class="content-container">
+        <div class="content">
+          <h1>
+            Get in touch
+          </h1>
+          <p>
+            Thanks for stopping by. Have a question or want to say hello?
+            You can reach me through 
+            <strong>
+              <a 
+              href="https://www.google.com/" 
+                class="text-reset"
+                target="_blank"
+                rel="noopener noreferrer">Typeform
+            </a> 
+            </strong>
+            or 
+  
+            <strong>
+              <a href="https://www.google.com/" 
+                class="text-reset"
+                target="_blank"
+                rel="noopener noreferrer">email</a>
+            </strong>
+          , and I'll get back to you as soon as possible.
+          </p>
+          
+          <div class="d-flex flex-row">
+  
+            <div class="contact-methods d-flex flex-column">
+              <a href="" 
+                class="text-reset"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fas fa-file-alt"></i>
+                typeform
+              </a>
+    
+              <a href="mailto:larryn.dev@gmail.com" 
+                class="text-reset"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fas fa-envelope"></i>
+                larryn.dev@gmail.com
+              </a>
+    
+              <a href="https://github.com/larryn35/" 
+                class="text-reset"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-github-square"></i>
+                github.com/larryn35
+              </a>
+            </div>
+
+            <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_mu8xmcca.json"  background="transparent"  speed=".8"  style="width: 200px; height: 200px;"  loop  autoplay></lottie-player>
+          
           </div>
         </div>
       </div>
+
+      <div class="quote-block">
+        <div class="slider">
+          <div class="slider-author">A leap of faith.</div>
+          <div>It's a leap of faith. That's all it is.</div>
+          <div>Peter Parker</div>
+        </div>
+      </div>
+
+      <svg 
+          preserveAspectRatio="none" 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 1440 320"
+          style="fill: #181d1f; z-index: -1; width: 200vw; height: 130vh;"
+        >
+        <path
+            d="M0,96L120,90.7C240,85,480,75,720,85.3C960,96,1200,128,1320,144L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+            opacity="1">
+        </path>
+      </svg>
+
     </section>
 
-    <!-- Project end -->
+    <!----------------------------------------- contact page end ----------------------------------------->
 
-    <!-- JS -->
-    <script src="/js/index.js"></script>
+
+    
+
+    <!----------------------------------------- JS ----------------------------------------->
+
     <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-      integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
       crossorigin="anonymous"
     ></script>
+    <script 
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" 
+     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" 
+      crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
-      integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+      src="https://kit.fontawesome.com/aea8f0e899.js"
       crossorigin="anonymous"
     ></script>
   </body>

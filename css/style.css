@@ -65,7 +65,7 @@ p {
 }
 
 .section {
-  padding-top: 90px;
+  padding-top: 70px;
   min-height: 100%;
 }
 
@@ -144,8 +144,17 @@ p {
 /* nav bar end */
 
 /* =============================================== home page area */
+
 .home-page {
-  /* position: relative; */
+  height: 80vh;
+  background-color: white;
+  margin-bottom: 20vh;
+}
+
+.home-page span {
+  height: 20vh;
+  width: 100%;
+  position: relative;
   overflow: hidden;
   background-color: white;
 }
@@ -161,7 +170,7 @@ p {
 .home-page .description-container {
   height: 80vh;
   display: flex;
-  align-items: center;
+  padding-top: 35vh;
   justify-content: center;
 }
 
@@ -299,7 +308,7 @@ p {
   overflow: hidden;
 }
 .contact-page .content-container {
-  height: 90vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -397,26 +406,6 @@ p {
 }
 /* quote */
 
-/* wave background */
-
-.wave-container > svg {
-  position: absolute;
-  bottom: 0;
-  /* height: 130vh; */
-  animation: animateWave 10s ease-in-out infinite alternate;
-  animation-fill-mode: both;
-}
-
-@keyframes animateWave {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-20%);
-  }
-}
-/* wave background */
-
 /* contact end */
 
 /* =============================================== app detail page ============== */
@@ -484,7 +473,7 @@ p {
   transform: none;
 }
 
-/* home animations on load */
+/* fade-in home animations */
 #dropDown {
   animation: dropDown 1.5s cubic-bezier(0, 1, 0.3, 1) 1s;
   animation-fill-mode: both;
@@ -515,5 +504,23 @@ p {
     opacity: 1;
   }
 }
+
+/* wave background */
+.wave-container > svg {
+  position: absolute;
+  bottom: 0;
+  animation: animateWave 8s ease-in-out infinite alternate;
+  animation-fill-mode: both;
+}
+
+@keyframes animateWave {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-30%);
+  }
+}
+/* wave background */
 
 /* =============================================== animations ============== */
