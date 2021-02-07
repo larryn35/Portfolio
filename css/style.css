@@ -146,17 +146,9 @@ p {
 /* =============================================== home page area */
 
 .home-page {
-  height: 80vh;
-  background-color: white;
-  margin-bottom: 20vh;
-}
-
-.home-page span {
-  height: 20vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  background-color: white;
+  height: 80%;
+  background-color: rgb(255, 255, 255);
+  padding: 90px 0;
 }
 
 .home-page .name-text {
@@ -168,17 +160,36 @@ p {
 }
 
 .home-page .description-container {
-  height: 80vh;
+  height: 100%;
   display: flex;
-  padding-top: 35vh;
   justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
-.home-page .description {
+/* .home-page .description {
+  height: 80%;
   display: inline-block;
-}
+} */
 
 /* home page end */
+
+.relative-container {
+  position: relative;
+  overflow: hidden;
+  height: 20%;
+  background-color: white;
+}
+
+@media (max-height: 375px) {
+  .home-page {
+    height: 100%;
+  }
+
+  .relative-container {
+    display: none;
+  }
+}
 
 /* =============================================== portfolio */
 .portfolio-page {
@@ -307,15 +318,14 @@ p {
   position: relative;
   overflow: hidden;
 }
+
 .contact-page .content-container {
-  height: 80vh;
+  height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
 .contact-page .content {
-  position: absolute;
   max-width: 800px;
   border-radius: 10px;
   padding: 2rem;
@@ -352,20 +362,10 @@ p {
 }
 
 /* lottie */
-
 .contact-page lottie-player {
-  opacity: 0.06;
-  position: absolute;
-  left: 37vw;
-  bottom: 40vh;
+  opacity: 0.1;
+  margin: 0 auto;
 }
-
-@media (max-width: 450px) {
-  .contact-page lottie-player {
-    bottom: 45vh;
-  }
-}
-
 /* lottie */
 
 /* quote */
@@ -459,7 +459,6 @@ p {
 /* =============================================== animations ============== */
 
 /* appear on scroll */
-
 .move-up {
   opacity: 0;
   transform: translateY(4em);
@@ -490,6 +489,7 @@ p {
   opacity: 1;
   transform: none;
 }
+/* appear on scroll */
 
 /* fade-in home animations */
 #dropDown {
@@ -522,6 +522,7 @@ p {
     opacity: 1;
   }
 }
+/* fade-in home animations */
 
 /* wave background */
 .wave-container > svg {
