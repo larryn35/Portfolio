@@ -16,28 +16,28 @@ function scrollProgressFunction() {
 
 // Change active navbar link on scroll/click
 // Code by Elena Scherer @ https://codepen.io/eksch/pen/xwdOeK
-$(document).ready(function () {
-  $("a[href*=#]").bind("click", function (e) {
-    e.preventDefault(); // prevent hard jump, the default behavior
+// $(document).ready(function () {
+//   $("a[href*=#]").bind("click", function (e) {
+//     e.preventDefault(); // prevent hard jump, the default behavior
 
-    var target = $(this).attr("href"); // Set the target as variable
+//     var target = $(this).attr("href"); // Set the target as variable
 
-    // perform animated scrolling by getting top-position of target-element and set it as scroll target
-    $("html, body")
-      .stop()
-      .animate(
-        {
-          scrollTop: $(target).offset().top,
-        },
-        600,
-        function () {
-          location.hash = target; //attach the hash (#jumptarget) to the pageurl
-        }
-      );
+//     // perform animated scrolling by getting top-position of target-element and set it as scroll target
+//     $("html, body")
+//       .stop()
+//       .animate(
+//         {
+//           scrollTop: $(target).offset().top,
+//         },
+//         600,
+//         function () {
+//           location.hash = target; //attach the hash (#jumptarget) to the pageurl
+//         }
+//       );
 
-    return false;
-  });
-});
+//     return false;
+//   });
+// });
 
 // Assign active class to nav links while scolling
 // Code by Elena Scherer @ https://codepen.io/eksch/pen/xwdOeK
@@ -96,3 +96,21 @@ function isElementInViewport(el) {
         (window.innerHeight || document.documentElement.clientHeight))
   );
 }
+
+
+// Fancybox
+$(document).ready(function () {
+  $(".fancybox").fancybox({
+    openEffect: "none",
+    closeEffect: "none",
+  });
+
+  $(".zoom").hover(
+    function () {
+      $(this).addClass("transition");
+    },
+    function () {
+      $(this).removeClass("transition");
+    }
+  );
+});
