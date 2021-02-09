@@ -24,11 +24,7 @@
     />
 
     <!-- jQuery fancybox -->
-    <link
-      rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-      media="screen"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -100,31 +96,35 @@
     <!----------------------------------------- app-detail ----------------------------------------->
     <section class="app-detail section">
       <div class="container">
-        <h1 class="title mb-5">hello world</h1>
+        <h1 class="subtitle mb-5">hello world</h1>
 
         <!-- screenshots -->
         <div class="row">
+
           <div class="col-md-4">
-            <a href="/img/HelloWorld/1.gif" class="fancybox" rel="lightbox">
-              <img src="/img/HelloWorld/1.png" class="zoom img-fluid" alt="" />
+            <a data-fancybox data-ratio="0.515" href="/img/HW/app-detail/video/HW_login.mp4">
+              <img src="/img/HW/app-detail/preview/HW_login.png" class="zoom img-fluid" alt="Logging in preview image" />
             </a>
           </div>
-          <div class="col-md-4">
-            <a href="/img/HelloWorld/1.gif" class="fancybox" rel="lightbox">
-              <img src="/img/HelloWorld/1.png" class="zoom img-fluid" alt="" />
+          <div class="col-md-4" id="video">
+            <a data-fancybox data-ratio="0.515" href="/img/HW/app-detail/video/HW_create.mp4">
+              <img src="/img/HW/app-detail/preview/HW_create.png" class="zoom img-fluid" alt="Creating chatroom preview image" /> 
             </a>
           </div>
+          
           <div class="col-md-4">
-            <a href="/img/HelloWorld/1.gif" class="fancybox" rel="lightbox">
-              <img src="/img/HelloWorld/1.png" class="zoom img-fluid" alt="" />
+            <a data-fancybox data-ratio="0.515" href="/img/HW/app-detail/video/HW_chat.mp4">
+              <img src="/img/HW/app-detail/preview/HW_chat.png" class="zoom img-fluid" alt="Chatting preview image" />
             </a>
           </div>
+
         </div>
         <!-- screenshots -->
 
         <!-- description -->
         <div class="description">
           <h3 class="subtitle">about the app</h3>
+          
           <p>
             My goals for this app were to design a clean-looking UI and learn to
             work with a new database. I chose to use Firebase since it offered
@@ -132,7 +132,6 @@
             is ideal for a chat app. For setting up Firebase, I followed
             <a
               href="https://www.youtube.com/watch?v=kV6aZ_vgykA"
-              class="text-reset"
               target="_blank"
               rel="noopener noreferrer"
               >Nathan Luu’s video
@@ -151,7 +150,7 @@
             <li>ImagePicker and UIViewControllerRepresentable</li>
             <li>
               Using <code>@EnvironmentObject</code>, <code>@StateObject</code>,
-              and <code>@ObservedObject</code>
+              and <code>@ObservedObject</code> to pass data between views
             </li>
           </ul>
         </div>
@@ -293,6 +292,6 @@
     ></script>
 
     <!-- Fancybox -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>

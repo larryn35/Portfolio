@@ -97,7 +97,6 @@ function isElementInViewport(el) {
   );
 }
 
-
 // Fancybox
 $(document).ready(function () {
   $(".fancybox").fancybox({
