@@ -6,7 +6,7 @@
   --clr-light: #f0f0ef;
   --clr-dark: #181d1f;
   --clr-accent: #10697f;
-  --clr-accent-2: #f5ae52;
+  --clr-accent-2: #f7cc94;
 
   --fs-title: 5rem;
   --fs-h1: 3rem;
@@ -83,7 +83,7 @@ p {
   margin: 20px 10px 20px 0;
   color: var(--clr-dark);
   font-size: 1rem;
-  transition: color 0.6s ease-in-out, border-color 0.6s ease-in-out;
+  transition: background-color 0.6s ease-in-out;
   cursor: pointer;
 }
 
@@ -93,8 +93,7 @@ p {
 }
 
 .default:hover {
-  border-color: var(--clr-accent-2);
-  color: var(--clr-accent-2);
+  background-color: var(--clr-accent-2);
 }
 /* buttons end */
 
@@ -120,7 +119,7 @@ p {
 }
 
 .header-area .main-menu .nav-item .nav-link:hover {
-  color: var(--clr-accent-2);
+  color: rgb(97, 101, 105);
 }
 .header-area .main-menu .nav-item .active {
   color: var(--clr-accent);
@@ -168,11 +167,6 @@ p {
   margin-top: 6rem;
 }
 
-/* .home-page .description {
-  height: 80%;
-  display: inline-block;
-} */
-
 /* home page end */
 
 .relative-container {
@@ -193,13 +187,6 @@ p {
 }
 
 /* =============================================== portfolio */
-.portfolio-page {
-  /* background-color: rgb(48, 48, 122); */
-}
-
-.portfolio-page .container {
-  /* background-color: rgb(105, 105, 138); */
-}
 
 .portfolio-page .project-block {
   background-color: #fdfdfd;
@@ -208,11 +195,11 @@ p {
   box-shadow: var(--box-shadow);
 }
 /* carousel */
-.carousel-indicators .active {
-  background-color: var(--clr-accent);
+.hello-world .carousel-indicators .active {
+  background-color: red;
 }
 .carousel-indicators li {
-  background-color: #181818;
+  background-color: slategray
 }
 .carousel-control-next,
 .carousel-control-prev /*, .carousel-indicators */ {
@@ -222,8 +209,16 @@ p {
 .portfolio-page .app-title {
   display: inline-block;
   padding: 1rem 0;
-  border-bottom: 2px solid rgb(77, 11, 97);
+  border-bottom: 2px solid red;
   margin-bottom: 1rem;
+}
+
+.portfolio-page .hello-world .app-title {
+  border-bottom: 2px solid red;
+}
+
+.portfolio-page .rx-quiz .app-title {
+  border-bottom: 2px solid rgb(30, 31, 80);
 }
 
 @media (max-width: 576px) {
