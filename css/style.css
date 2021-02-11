@@ -14,8 +14,8 @@
   --fs-h3: 1.75rem;
   --fs-body: 1.25rem;
 
-  --box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
-    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+  --box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.2),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 992px) {
@@ -37,6 +37,8 @@
     --fs-body: 1rem;
   }
 }
+/* variables end */
+
 
 /* =============================================== general */
 html,
@@ -69,12 +71,22 @@ p {
   min-height: 100%;
 }
 
+.container-fluid {
+  padding: 0 4rem;
+}
+
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 0 2rem;
+  }
+}
+
 .subtitle {
   color: var(--clr-accent);
   font-family: var(--ff-primary);
 }
-
 /* general end */
+
 
 /* =============================================== buttons */
 .btn {
@@ -83,8 +95,9 @@ p {
   margin: 20px 10px 20px 0;
   color: var(--clr-dark);
   font-size: 1rem;
-  transition: background-color 0.6s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
   cursor: pointer;
+  box-shadow: none;
 }
 
 .default {
@@ -93,15 +106,12 @@ p {
 }
 
 .default:hover {
-  background-color: var(--clr-accent-2);
+  box-shadow: var(--box-shadow);
 }
 /* buttons end */
 
-/* =============================================== nav bar */
-/* .navbar-custom {
-  background-color: #070f18;
-} */
 
+/* =============================================== nav bar */
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
@@ -139,102 +149,73 @@ p {
   background: var(--clr-accent);
   width: 0%;
 }
-
 /* nav bar end */
 
-/* =============================================== home page area */
 
+/* =============================================== home page area */
 .home-page {
-  height: 80%;
-  background-color: rgb(255, 255, 255);
-  padding: 90px 0;
+  background-color: #fdfdfd;
+  background-image: url(/img/wave.svg);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+}
+
+.home-page .home-container {
+  height: 100%;
+  width: 70%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-top: 6rem;
 }
 
 .home-page .name-text {
   color: var(--clr-accent);
   font-size: var(--fs-title);
   font-family: var(--ff-primary);
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: .5rem 0;
 }
 
-.home-page .description-container {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  margin-top: 6rem;
+@media (max-width: 992px) {
+  .home-page .home-container {
+    width: 100%;
+  }
 }
-
 /* home page end */
 
-.relative-container {
-  position: relative;
-  overflow: hidden;
-  height: 20%;
-  background-color: white;
-}
-
-@media (max-height: 375px) {
-  .home-page {
-    height: 100%;
-  }
-
-  .relative-container {
-    display: none;
-  }
-}
 
 /* =============================================== portfolio */
-
 .portfolio-page .project-block {
   background-color: #fdfdfd;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
 }
+
+.portfolio-page .app-title {
+  display: inline-block;
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--clr-accent);
+  margin-bottom: 1rem;
+}
+
 /* carousel */
 .hello-world .carousel-indicators .active {
-  background-color: red;
+  background-color: var(--clr-accent);
 }
 .carousel-indicators li {
   background-color: slategray
 }
 .carousel-control-next,
-.carousel-control-prev /*, .carousel-indicators */ {
+.carousel-control-prev {
   filter: invert(100%);
 }
-
-.portfolio-page .app-title {
-  display: inline-block;
-  padding: 1rem 0;
-  border-bottom: 2px solid red;
-  margin-bottom: 1rem;
-}
-
-.portfolio-page .hello-world .app-title {
-  border-bottom: 2px solid red;
-}
-
-.portfolio-page .rx-quiz .app-title {
-  border-bottom: 2px solid rgb(30, 31, 80);
-}
-
-@media (max-width: 576px) {
-  .portfolio-page .project-block {
-    border-radius: 0;
-  }
-}
-
 /* portfolio end */
 
+
 /* =============================================== about */
-
-.about-page {
-  /* background-color: rgb(20, 83, 28); */
-}
-
 .about-page .about-container {
   background-color: #fdfdfd;
   padding: 2rem;
@@ -251,11 +232,6 @@ p {
   margin-top: 4rem;
   font-size: 1.5rem;
   color: rgb(177, 177, 177);
-}
-
-.about-page .subtitle-title {
-  color: var(--clr-dark);
-  margin: 1rem 0;
 }
 
 .about-page .interests i {
@@ -300,15 +276,10 @@ p {
     display: none;
   }
 }
-
 /* about end */
 
+
 /* =============================================== contact */
-
-.contact-page {
-  /* background-color: rgba(255, 0, 0, 0.247); */
-}
-
 .contact-page {
   color: var(--clr-light);
   position: relative;
@@ -324,7 +295,7 @@ p {
 .contact-page .content {
   max-width: 800px;
   border-radius: 10px;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .contact-page h1 {
@@ -362,7 +333,6 @@ p {
   opacity: 0.1;
   margin: 0 auto;
 }
-/* lottie */
 
 /* quote */
 .quote-block {
@@ -416,14 +386,24 @@ p {
     margin-top: 25px;
   }
 }
-/* quote */
-
 /* contact end */
 
-/* =============================================== app detail page ============== */
 
+
+/* app detail page ================================================= */
 .app-detail .subtitle {
-  margin: 2rem 0 1rem 0;
+  padding: 2rem 0 1rem 0;
+}
+
+.app-detail .detail-container {
+  background-color: #fdfdfd;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.app-detail .banner img {
+  max-height: 700px;
 }
 
 .app-detail .description a {
@@ -439,7 +419,11 @@ p {
   margin-left: 2rem;
 }
 
-.app-detail img.zoom {
+.app-detail .row {
+  margin-top: 4rem;
+}
+
+.app-detail .row img.zoom {
   width: 100%;
   max-height: 350px;
   border-radius: 5px;
@@ -452,20 +436,21 @@ p {
 }
 
 .app-detail img.transition {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
 
   -webkit-opacity: 1;
   -moz-opacity: 1;
   -o-opacity: 1;
   opacity: 1;
 }
+/* == app detail page ================================================= */
 
-/* =============================================== app detail page ============== */
 
-/* =============================================== animations ============== */
+
+/* == animations ======================================================= */
 
 /* appear on scroll */
 .move-up {
@@ -500,9 +485,9 @@ p {
 }
 /* appear on scroll */
 
-/* fade-in home animations */
+/* home animations */
 #dropDown {
-  animation: dropDown 1.5s cubic-bezier(0, 1, 0.3, 1) 1s;
+  animation: dropDown 1.5s cubic-bezier(0, 1, 0.3, 1) 1.2s;
   animation-fill-mode: both;
 }
 
@@ -531,9 +516,30 @@ p {
     opacity: 1;
   }
 }
+
+#fade-up {
+  position: relative;
+  animation-name: fade-up;
+  animation-duration: 2s;
+  animation-delay: 1.2s;
+  animation-fill-mode: both;
+  z-index: 2;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 /* fade-in home animations */
 
 /* wave background */
+
 .wave-container > svg {
   position: absolute;
   bottom: 0;
@@ -551,4 +557,4 @@ p {
 }
 /* wave background */
 
-/* =============================================== animations ============== */
+/* == animations ======================================================= */

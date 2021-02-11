@@ -24,7 +24,10 @@
     />
 
     <!-- jQuery fancybox -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -52,7 +55,7 @@
     <header class="header-area">
       <div class="main-menu">
         <nav class="navbar fixed-top navbar-expand-sm bg-white">
-          <div class="container">
+          <div class="container-fluid">
             <span class="navbar-text"> LN </span>
             <button
               class="navbar-toggler"
@@ -95,74 +98,108 @@
 
     <!----------------------------------------- app-detail ----------------------------------------->
     <section class="app-detail section">
-      <div class="container">
-        <h1 class="subtitle mb-5">hello world</h1>
+      <div class="container-fluid">
+        <h1 class="subtitle">hello world</h1>
+
+        <!-- banner photo -->
+        <div class="d-flex flex-row justify-content-center banner">
+          <img
+            src="/img/HW/hw-scenes.png"
+            alt="Screenshots of Hello World"
+            class="img-fluid"
+          />
+        </div>
+
+        <div class="detail-container">
+          <!-- description -->
+          <div class="description">
+            <h3 class="subtitle">about the app</h3>
+
+            <p>
+              My goals for this app were to design a clean UI and learn to work
+              with a new database. I chose to use Firebase since it offered user
+              authentication and realtime storing and syncing of data - which is
+              ideal for a chat app. For setting up Firebase, I followed
+              <a
+                href="https://www.youtube.com/watch?v=kV6aZ_vgykA"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Nathan Luu’s video
+              </a>
+              on creating an iOS chat app. I expanded on his version by adding
+              features such as storing profile pictures, showing timestamps of
+              messages, and tracking the number of unread messages for a
+              chatroom. While there is plenty of room for improvement, I am
+              happy with how the app turned out.
+            </p>
+
+            <h3 class="subtitle">what I learned</h3>
+            <ul class="mb-4">
+              <li>Firebase Storage, Authentication, and Cloud Firestore</li>
+              <li>SDWebImageSwiftUI</li>
+              <li>ImagePicker and UIViewControllerRepresentable</li>
+              <li>
+                Using <code>@EnvironmentObject</code>,
+                <code>@StateObject</code>, and <code>@ObservedObject</code> to
+                pass data between views
+              </li>
+            </ul>
+          </div>
+        </div>
 
         <!-- screenshots -->
         <div class="row">
-
           <div class="col-md-4">
-            <a data-fancybox data-ratio="0.515" href="/img/HW/app-detail/video/HW_login.mp4">
-              <img src="/img/HW/app-detail/preview/HW_login.png" class="zoom img-fluid" alt="Logging in preview image" />
+            <a
+              data-fancybox
+              data-ratio="0.515"
+              href="/img/HW/app-detail/video/HW_login.mp4"
+            >
+              <img
+                src="/img/HW/app-detail/preview/HW_login.png"
+                class="zoom img-fluid"
+                alt="Logging in preview image"
+              />
             </a>
           </div>
           <div class="col-md-4" id="video">
-            <a data-fancybox data-ratio="0.515" href="/img/HW/app-detail/video/HW_create.mp4">
-              <img src="/img/HW/app-detail/preview/HW_create.png" class="zoom img-fluid" alt="Creating chatroom preview image" /> 
+            <a
+              data-fancybox
+              data-ratio="0.515"
+              href="/img/HW/app-detail/video/HW_create.mp4"
+            >
+              <img
+                src="/img/HW/app-detail/preview/HW_create.png"
+                class="zoom img-fluid"
+                alt="Creating chatroom preview image"
+              />
             </a>
           </div>
 
           <div class="col-md-4">
-            <a data-fancybox data-ratio="0.515" href="/img/HW/app-detail/video/HW_chat.mp4">
-              <img src="/img/HW/app-detail/preview/HW_chat.png" class="zoom img-fluid" alt="Chatting preview image" />
+            <a
+              data-fancybox
+              data-ratio="0.515"
+              href="/img/HW/app-detail/video/HW_chat.mp4"
+            >
+              <img
+                src="/img/HW/app-detail/preview/HW_chat.png"
+                class="zoom img-fluid"
+                alt="Chatting preview image"
+              />
             </a>
           </div>
-
         </div>
         <!-- screenshots -->
-
-        <!-- description -->
-        <div class="description">
-          <h3 class="subtitle">about the app</h3>
-          
-          <p>
-            My goals for this app were to design a clean UI and learn to
-            work with a new database. I chose to use Firebase since it offered
-            user authentication and realtime storing and syncing of data - which
-            is ideal for a chat app. For setting up Firebase, I followed
-            <a
-              href="https://www.youtube.com/watch?v=kV6aZ_vgykA"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Nathan Luu’s video
-            </a>
-            on creating an iOS chat app. I expanded on his version by adding
-            features such as storing profile pictures, showing timestamps of
-            messages, and tracking the number of unread messages for a chatroom.
-            While there is plenty of room for improvement, I am happy with how
-            the app turned out.
-          </p>
-
-          <h3 class="subtitle">what I learned</h3>
-          <ul class="mb-4">
-            <li>Firebase Storage, Authentication, and Cloud Firestore</li>
-            <li>SDWebImageSwiftUI</li>
-            <li>ImagePicker and UIViewControllerRepresentable</li>
-            <li>
-              Using <code>@EnvironmentObject</code>, <code>@StateObject</code>,
-              and <code>@ObservedObject</code> to pass data between views
-            </li>
-          </ul>
-        </div>
       </div>
       <!-- description end -->
     </section>
     <!-----------------------------------------  app-detail end ----------------------------------------->
 
     <!----------------------------------------- contact page ----------------------------------------->
-    
-    <section class="contact-page section" id="contact">
-      
+
+    <section class="contact-page section nav-func" id="contact">
+      <!-- wave animation -->
       <div class="wave-container">
         <svg
           preserveAspectRatio="none"
@@ -176,18 +213,19 @@
           ></path>
         </svg>
       </div>
+      <!-- wave animation end -->
 
-      <div class="content-container">
+      <div class="content-container container-fluid">
         <div class="content">
           <lottie-player
-          src="https://assets7.lottiefiles.com/packages/lf20_mu8xmcca.json"
-          background="transparent"
-          speed=".8"
-          style="width: 150px; height: 150px"
-          loop
-          autoplay
-        ></lottie-player>
-          <h1>Get in touch</h1>
+            src="https://assets7.lottiefiles.com/packages/lf20_mu8xmcca.json"
+            background="transparent"
+            speed=".8"
+            style="width: 150px; height: 150px"
+            loop
+            autoplay
+          ></lottie-player>
+          <h1 class="move-right show-on-scroll">Get in touch</h1>
           <p>
             Thanks for stopping by. Have a question or want to say hello? You
             can reach me through
@@ -257,8 +295,6 @@
           <div>Peter Parker</div>
         </div>
       </div>
-
-
     </section>
 
     <!----------------------------------------- contact page end ----------------------------------------->
