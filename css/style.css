@@ -501,10 +501,6 @@ p {
 
 
 /* app detail page ================================================= */
-.app-detail .subtitle {
-  padding: 2rem 0 1rem 0;
-}
-
 .app-detail .detail-container {
   background-color: #fdfdfd;
   padding: 2rem;
@@ -514,6 +510,15 @@ p {
 
 .app-detail .banner img {
   max-height: 700px;
+}
+
+.app-detail .heading-title {
+  padding-bottom: 1rem;
+  color: var(--clr-accent);
+}
+
+.app-detail p {
+  margin-bottom: 2rem;
 }
 
 .app-detail .description a {
