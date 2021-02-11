@@ -81,6 +81,12 @@ p {
   }
 }
 
+@media (max-width: 500px) {
+  .container-fluid {
+    padding: 0 1rem;
+  }
+}
+
 .subtitle {
   color: var(--clr-accent);
   font-family: var(--ff-primary);
@@ -178,11 +184,88 @@ p {
   padding: .5rem 0;
 }
 
-@media (max-width: 992px) {
+.home-page hr {
+  margin: 4rem auto 2rem auto;
+  height: 4px;
+}
+
+.home-page .columns {
+  column-count: 4;
+  width: 100%;
+}
+
+.home-page .button-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-page a {
+  display:inline-block;
+  font-size: 30px;
+  line-height: 50px;
+  color:var(--clr-dark);
+  width: 50px;
+  height: 50px;
+  text-align: end;
+  border-radius: 50%;
+  margin-top: 5px;
+  transition: transform .3s;
+}
+
+.home-page a span {
+  position: absolute;
+  display: inline-block;
+  line-height: 25px;
+  right: 30px;
+  font-size: 1rem;
+  font-family: var(--ff-secondary);
+  padding: 2px 10px;
+  border: 1px solid var(--clr-light);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  opacity: 0;
+  transition: opacity .4s, right .3s ease-in-out
+} 
+
+.home-page a:hover {
+  color: var(--clr-accent);
+  transform: scale(1.2);
+}
+
+.home-page a:hover span {
+  right: 50px;
+  opacity: 1;
+}
+
+@media (max-width: 1200px) {
   .home-page .home-container {
     width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .home-page .button-column {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .home-page a {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .home-page a span {
+    display: none;
+  }
+
+  .home-page hr {
+    margin-top: 1rem;
+  }
+
+}
+
 /* home page end */
 
 
@@ -212,6 +295,12 @@ p {
 .carousel-control-prev {
   filter: invert(100%);
 }
+
+@media (max-width: 500px) {
+  .portfolio-page .project-block {
+    padding: 1rem;
+  }
+}
 /* portfolio end */
 
 
@@ -228,14 +317,18 @@ p {
   max-height: 300px;
 }
 
+.about-page .heading-title {
+  padding: 2rem 0 1rem 0;
+  color: var(--clr-accent);
+}
+
 .about-page .interests {
-  margin-top: 4rem;
   font-size: 1.5rem;
   color: rgb(177, 177, 177);
 }
 
 .about-page .interests i {
-  padding: 1rem 1rem 2rem 0;
+  padding: 0 1rem 2rem 0;
   transition: all 0.3s ease-in 0.2s;
   height: 2rem;
 }
@@ -271,9 +364,26 @@ p {
   transition: opacity 2s 0.6s, transform 0.3s ease-out 0.7s;
 }
 
-@media (max-width: 400px) {
+.about-page .mobile-text {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .about-page .about-container {    
+    padding: 1rem;
+  }
+
   .about-page .interests {
     display: none;
+  }
+
+  .about-page .mobile-text {
+    display: inline-block;
+  }
+
+  .about-page .about-container img {
+    max-width: 200px;
+    max-height: 200px;
   }
 }
 /* about end */
@@ -429,17 +539,17 @@ p {
   border-radius: 5px;
   object-fit: contain;
   transition: all 0.3s ease-in-out;
-  opacity: 0.7;
+  opacity: 0.8;
   padding: 1rem;
   margin-bottom: 2rem;
   box-shadow: var(--box-shadow);
 }
 
 .app-detail img.transition {
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -o-transform: scale(1.05);
-  transform: scale(1.05);
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  transform: scale(1.02);
 
   -webkit-opacity: 1;
   -moz-opacity: 1;
@@ -505,6 +615,7 @@ p {
   animation-name: fadein;
   animation-duration: 2s;
   animation-delay: 1s;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 }
 
@@ -521,7 +632,8 @@ p {
   position: relative;
   animation-name: fade-up;
   animation-duration: 2s;
-  animation-delay: 1.2s;
+  animation-delay: 1.5s;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: both;
   z-index: 2;
 }
@@ -536,6 +648,34 @@ p {
     transform: none;
   }
 }
+
+#line-shrink {
+  animation-name: line-shrink;
+  animation-duration: 2s;
+  animation-delay: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes line-shrink {
+  0% {
+    opacity: 0;
+    color: var(--clr-light);
+  }
+  50% {
+    opacity: 0.4;
+    width: 100%;
+  }
+  100% {
+    opacity: 0.7;
+    width: 175px;
+    color: var(--clr-accent);
+  }
+}
+
+
+
+
 /* fade-in home animations */
 
 /* wave background */
