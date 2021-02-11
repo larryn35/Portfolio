@@ -576,14 +576,6 @@ p {
   will-change: transform, opacity;
 }
 
-.move-left {
-  opacity: 0;
-  transform: translateX(4em);
-  transition: transform 1s 0.25s cubic-bezier(0, 1, 0.3, 1),
-    opacity 0.3s 0.25s ease-out;
-  will-change: transform, opacity;
-}
-
 .move-right {
   opacity: 0;
   transform: translateX(-4em);
@@ -597,6 +589,17 @@ p {
 .move-right.is-visible {
   opacity: 1;
   transform: none;
+}
+
+/* Navbar issues with move-left in mobile */
+@media (min-width: 500px) {
+  .move-left {
+    opacity: 0;
+    transform: translateX(4em);
+    transition: transform 1s 0.25s cubic-bezier(0, 1, 0.3, 1),
+      opacity 0.3s 0.25s ease-out;
+    will-change: transform, opacity;
+  }
 }
 /* appear on scroll */
 
@@ -677,10 +680,6 @@ p {
     color: var(--clr-accent);
   }
 }
-
-
-
-
 /* fade-in home animations */
 
 /* wave background */
