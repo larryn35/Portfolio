@@ -113,3 +113,15 @@ $(document).ready(function () {
     }
   );
 });
+
+// Mobile - close navbar when tapped outside
+// Code by Digifeast @ https://www.digitfeast.com/2020/02/bootstrap-navbar-collapse-menu-close-on-click-outside.html
+$(document).ready(function () {
+    $(document).click(function (event) {
+        var click = $(event.target);
+        var _open = $(".navbar-collapse").hasClass("show");
+        if (_open === true && !click.hasClass("navbar-toggler")) {
+            $(".navbar-toggler").click();
+        }
+    });
+});
