@@ -629,6 +629,13 @@ p {
   }
 }
 
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */ 
+  #dropDown {
+    animation: dropDown 1.5s ease-in-out;
+  }
+}
+
 #fadeIn {
   position: relative;
   animation-name: fadein;
