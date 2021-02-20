@@ -315,6 +315,8 @@ p {
 .about-page .about-container img {
   max-width: 300px;
   max-height: 300px;
+  width: auto;
+  height: auto;
 }
 
 .about-page .heading-title {
@@ -384,6 +386,8 @@ p {
   .about-page .about-container img {
     max-width: 200px;
     max-height: 200px;
+    width: auto;
+    height: auto;
   }
 }
 /* about end */
