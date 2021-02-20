@@ -516,7 +516,8 @@ p {
 
 .app-detail .banner img {
   max-height: 700px;
-  width: auto;
+  max-width: 786px;
+  width: 100%;
   height: auto;
   padding: 0;
 }
