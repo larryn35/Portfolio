@@ -616,8 +616,8 @@ p {
 
 /* home animations */
 #dropDown {
-  animation: dropDown 1.5s cubic-bezier(0, 1, 0.3, 1) 1.2s;
-  animation-fill-mode: both;
+  animation: dropDown 1.5s ease-in-out;
+  /* animation-fill-mode: both; */
 }
 
 @keyframes dropDown {
@@ -629,18 +629,18 @@ p {
   }
 }
 
-@supports (-webkit-touch-callout: none) {
+/* @supports (-webkit-touch-callout: none) { */
   /* CSS specific to iOS devices */ 
-  #dropDown {
+  /* #dropDown {
     animation: dropDown 1.5s ease-in-out;
   }
-}
+} */
 
 #fadeIn {
   position: relative;
   animation-name: fadein;
-  animation-duration: 2s;
-  animation-delay: 1s;
+  animation-duration: 1.5s;
+  animation-delay: .5s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 }
@@ -657,8 +657,8 @@ p {
 #fade-up {
   position: relative;
   animation-name: fade-up;
-  animation-duration: 2s;
-  animation-delay: 1.5s;
+  animation-duration: 1.5s;
+  animation-delay: 1.2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
   z-index: 2;
@@ -677,8 +677,8 @@ p {
 
 #line-shrink {
   animation-name: line-shrink;
-  animation-duration: 2s;
-  animation-delay: 1.5s;
+  animation-duration: 1.7s;
+  animation-delay: 1s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 }
