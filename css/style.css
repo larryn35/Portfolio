@@ -523,6 +523,27 @@ p {
   padding: 0;
 }
 
+.app-detail .banner .fab {
+  text-align: center;
+  display: block;
+  width: 175px;
+  margin: 0 auto 4rem auto;
+  padding: 1rem;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.app-detail .banner .github-text {
+  font-size: 1.3rem;
+  font-family: var(--ff-secondary);
+  margin-left: 0.5rem;
+}
+
+.app-detail .banner .fab:hover {
+  color: var(--clr-accent);
+}
+
 .app-detail .heading-title {
   padding-bottom: 1rem;
   color: var(--clr-accent);
@@ -628,13 +649,6 @@ p {
     transform: none;
   }
 }
-
-/* @supports (-webkit-touch-callout: none) { */
-  /* CSS specific to iOS devices */ 
-  /* #dropDown {
-    animation: dropDown 1.5s ease-in-out;
-  }
-} */
 
 #fadeIn {
   position: relative;
