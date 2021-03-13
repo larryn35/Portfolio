@@ -526,13 +526,20 @@ p {
 .app-detail .banner .fab {
   text-align: center;
   display: block;
-  width: 175px;
   margin: 0 auto 4rem auto;
   padding: 1rem;
   background-color: #fdfdfd;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
 }
+
+.app-detail .banner .fa-github {
+  width: 175px;
+}
+.app-detail .banner .fa-apple {
+  width: 350px;
+}
+
 
 .app-detail .banner .github-text {
   font-size: 1.3rem;
