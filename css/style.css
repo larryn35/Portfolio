@@ -284,6 +284,10 @@ p {
   margin-bottom: 1rem;
 }
 
+.portfolio-page .project-block .fa-apple {
+  padding-right: 0.5rem;
+}
+
 /* carousel */
 .hello-world .carousel-indicators .active {
   background-color: var(--clr-accent);
