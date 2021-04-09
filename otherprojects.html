@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Other Projects</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- jQuery fancybox -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Scope+One"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!----------------------------------------- Header ----------------------------------------->
+    <header class="header-area">
+      <div class="main-menu">
+        <nav class="navbar fixed-top navbar-expand-md bg-white">
+          <div class="container-fluid">
+            <span class="navbar-text"> LN </span>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span>
+                <i class="fas fa-bars" style="font-size: 1.25rem"></i>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <div class="me-auto"></div>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/index.html#home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/index.html#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/index.html#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!----------------------------------------- Header end ------------------------------------------>
+
+    <!----------------------------------------- app-detail ----------------------------------------->
+    <section class="app-detail section" id="home">
+      <div class="container-fluid">
+        <h1 class="subtitle">Other Projects</h1>
+
+
+        <!-- Drug interaction checker -->
+        <div class="row align-items-center">
+
+          <!-- banner photo -->
+          <div class="col-lg-6 col-md-12">
+            <div class="banner">
+              <img src="/img/PV/pv-scenes.png" alt="Pyrls Vision" />
+            </div>
+          </div>
+          <!-- banner photo -->
+
+          <!-- description -->
+          <div class="col-lg-6 col-md-12">
+            <div class="detail-container">
+              <div class="description">
+                <h3 class="heading-title">Pyrls Vision</h3>
+
+                <p>
+                  This is an app that I developed as an intern at Cosmas Health. and it focuses on optical character recognition (OCR). The app allows users to find drug 
+                  information and check for interactions from a list of drugs. Users can search for drugs by manually typing the drug's name or by using 
+                  their camera to take a photo of text. A simplified, scaled-down version of this app can be found on my 
+                  
+                  <a
+                  href="https://github.com/larryn35/TextRecognitionDemo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Github
+                </a>
+                  .
+
+                </p>
+
+                <h3 class="heading-title">what i learned</h3>
+                <ul class="mb-4">
+                  <li>Perform multiple network requests using <code>Combine</code></li>
+                  <li>ML Kit Vision's text recognition API</li>
+                  <li>Better error handling with <code>Result</code> type and enums</li>
+                  <li>Create an onboarding screen using <code>Tabview</code> and <code>@AppStorage</code></li>
+                </ul>
+
+                <a
+                data-fancybox
+                data-ratio="0.515"
+                href="/img/PV/PV-video.mp4"
+                >
+                  <h3 class="heading-title">
+                    see it in action
+                    <i class="mx-2 fas fa-play-circle"></i>
+                  </h3>
+                </a>
+
+              </div>
+            </div>
+          </div>
+          <!-- description end -->
+        </div>
+        <!-- Drug interaction checker -->
+
+        <br>
+
+        <!-- basketball stats -->
+        <div class="row align-items-center">
+
+          <!-- description -->
+          <div class="col-lg-6 col-md-12">
+            <div class="detail-container">
+              <div class="description">
+                <h3 class="heading-title">Basketball Stats Checker</h3>
+
+                <p>
+                  A simple, iOS app that allows you to find player stats for the current NBA season. My goals for this app were to get 
+                  familiar with <code>Combine</code> and unit testing, as well as practice making network requests and 
+                  retrieving data from a web API. This app and a more detailed explanation of how I created it can be found on my 
+                  
+                  <a
+                  href="https://github.com/larryn35/BasketballStats"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Github
+                </a>.
+
+                </p>
+
+                <h3 class="heading-title">what i learned</h3>
+                <ul class="mb-4">
+                  <li>Perform network requests and field validation with <code>Combine</code></li>
+                  <li>Write more testable code using protocols and mock services</li>
+                  <li>Write and run tests with the <code>XCTest</code> Framework</li>
+                </ul>
+
+                <a
+                data-fancybox
+                data-ratio="0.515"
+                href="/img/BS/BS-video.mp4"
+                >
+                  <h3 class="heading-title">
+                    see it in action
+                    <i class="mx-2 fas fa-play-circle"></i>
+                  </h3>
+                </a>
+
+              </div>
+            </div>
+          </div>
+          <!-- description end -->
+
+          <!-- banner photo -->
+          <div class="col-lg-6 col-md-12">
+            <div class="banner">
+              <img src="/img/BS/bs-scenes.png" alt="Basketball Stats" />
+            </div>
+          </div>
+          <!-- banner photo -->
+                  
+        </div>
+        <!-- basketball stats -->
+
+    </section>
+    <!-----------------------------------------  app-detail end ----------------------------------------->
+
+
+
+    <!----------------------------------------- contact page ----------------------------------------->
+    <section class="contact-page section" id="contact">
+      <!-- wave animation -->
+      <div class="wave-container">
+        <svg
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          style="fill: #181d1f; z-index: -1; width: 200vw; height: 120%"
+        >
+          <path
+            d="M0,96L120,90.7C240,85,480,75,720,85.3C960,96,1200,128,1320,144L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+            opacity="1"
+          ></path>
+        </svg>
+      </div>
+      <!-- wave animation end -->
+
+      <div class="content-container container-fluid">
+        <div class="content">
+          <lottie-player
+            src="https://assets7.lottiefiles.com/packages/lf20_mu8xmcca.json"
+            background="transparent"
+            speed=".8"
+            style="width: 150px; height: 150px"
+            loop
+            autoplay
+          ></lottie-player>
+          <h1 class="move-right show-on-scroll">Get in touch</h1>
+          <p>
+            Thanks for stopping by. Have a question or want to say hello? You
+            can reach me through
+            <strong>
+              <a
+                href="https://6eu89rcl3sc.typeform.com/to/qFQ9PhM5"
+                class="text-reset"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Typeform
+              </a>
+            </strong>
+            or
+
+            <strong>
+              <a
+                href="mailto:larryn.dev@gmail.com"
+                class="text-reset"
+                target="_blank"
+                rel="noopener noreferrer"
+                >email</a
+              >
+            </strong>
+            and I'll get back to you as soon as possible.
+          </p>
+
+          <div class="d-flex flex-row">
+            <div class="contact-methods d-flex flex-column">
+              <a
+                href="https://6eu89rcl3sc.typeform.com/to/qFQ9PhM5"
+                class="text-reset"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas fa-file-alt"></i>
+                typeform
+              </a>
+
+              <a
+                href="mailto:larryn.dev@gmail.com"
+                class="text-reset"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas fa-envelope"></i>
+                larryn.dev@gmail.com
+              </a>
+
+              <a
+                href="https://github.com/larryn35/"
+                class="text-reset"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github-square"></i>
+                github.com/larryn35
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-block">
+        <div class="slider">
+          <div class="slider-author">A leap of faith.</div>
+          <div>It's a leap of faith. That's all it is.</div>
+          <div>Peter Parker</div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------------- contact page end ----------------------------------------->
+
+    <!----------------------------------------- JS ----------------------------------------->
+
+    <!-- jQuery minified -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Script -->
+    <script src="js/script.js"></script>
+
+    <!-- Lottie -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/aea8f0e899.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Fancybox -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  </body>
+</html>
